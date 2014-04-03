@@ -1,0 +1,15 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdftex 2014.3.20)  3 APR 2014 13:17
+entering extended mode
+**C:/Users/Maciek/Desktop/magisterka/Praca*magisterska/aghdpl.cls
+("C:/Users/Maciek/Desktop/magisterka/Praca magisterska/aghdpl.cls"
+*** [aghdpl.cls] --- (MSz, GJN) v2.0 <19.11.2013> ***
+! Undefined control sequence.
+l.14 \NeedsTeXFormat
+                    {LaTeX2e} %
+? 
+! Emergency stop.
+l.14 \NeedsTeXFormat
+                    {LaTeX2e} %
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
