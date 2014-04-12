@@ -4,8 +4,149 @@
 \section{Stanowisko}
 \label{sec:stanowisko}
 
-\section{Model w simulinku}
+\subsection{Robot przmysłowy}
+\label{sebsec:RobotPrzemyslowy}
+\noindent Producent: Mazowieckie Zakłady Automatyki Przemysłowej\\
+Model: IRp-6\\
+Parametry:\\
+\begin{tabular}{|l|l|l|} \hline
+\multicolumn{2}{|l|}{Osie sterowane: }& 5 \\ \hline
+\multicolumn{2}{|l|}{Kontrolery: }& \\ \hline
+\multicolumn{2}{|l|}{Maksymalne obciążenie kiści: } & \\ \hline
+\multicolumn{2}{|l|}{Powtarzalność: }& \\ \hline
+\multicolumn{2}{|l|}{Masa jednostki mechanicznej: }& \\ \hline
+\multicolumn{2}{|l|}{Zasięg: }& \\ \hline
+{Zakres ruchu:} & {Oś1:} & \+- 160 \\ \cline{2-3}
+& Oś2: & \+- 40 \\ \cline{2-3}
+& Oś3: & -25..+40\\ \cline{2-3}
+& Oś4: & -25..+120\\ \cline{2-3}
+& Oś5: & -25..+150\\ \hline
+Prędkość maksymalna: & Oś1: & 60 \\ \cline{2-3}
+& Oś2: & 60 \\ \cline{2-3}
+& Oś3: & 60 \\ \cline{2-3}
+& Oś4: & 75 \\ \cline{2-3}
+& Oś5: & 125\\ \hline
+Moment: & Oś1: & \\ \cline{2-3}
+& Oś2: & \\ \cline{2-3}
+& Oś3: & \\ \cline{2-3}
+& Oś4: & \\ \cline{2-3}
+& Oś5: & \\ \hline
+\end{tabular}
+
+\vspace{5mm}
+
+Podstawa robota została umieszczmona na napędzie lniowym, w celu poszerzenia obszaru roboczego, tak aby pokrywał się on z polem widzenia systemu wizyjnego.\\
+Parametry:\\
+\begin{tabular}{|l|l|}\hline
+Napęd: & Elektryczny napęd liniowy ze śrubą \\ \hline
+Wielkość: & \\ \hline
+Skok [mm]: & \\ \hline
+Maks. siła podawania [N]: & \\ \hline
+Moment My/Mz [Nm]: & \\ \hline
+Moment Mx [Nm] & \\ \hline
+Prędkość [m/s]: & \\ \hline
+\end{tabular}
+\subsection{Sterowanie}
+Sterownie robotem odbywało się przez system modułowy dSpace DS1005. Komputer PC połaczony z tym systemem przez magistralę AT-bus, pełnił rolę prototypowania sterownika. W programie Matlab/Simulink utowrzony został sterownik robota, który przekonwetowany na kod źródłowy w języku C przez narzędzie RTW (Real-Time Workshop), został skopmilowany, zlinkowany oraz wgrany do karty procesowej DS1005 z procesorem sygnałowym za pomocą modułu RTI (Real-Time Interface). Ponadto uruchomiony w komputerze progrm ControlDesk, był interface'm graficznym  między sterownikiem a użytkownikiem, działającym w czasie pracy robota. Za pomocą tego programu wprowadzano potrzebne parametry do odpowiedniej pracy robota.
+\noindent 
+Komputer PC:\\
+System operacyjny: Windows 2000 Serwer\\
+Procesor:\\
+Pamięć RAM:\\
+Oprogramowanie:
+- Matlab 2007b z bibliotekami: Simulink (służący do prototypowania sterownika), Iamge Prcessing Toolbox (do przetwarzania obrazu) oraz RTW (generacji kodu źródłowego z modelu Simulink) ;
+- Program ControlDesk - interface graficzny między operatorem, a sterownikiem;
+- Moduł RTI (Real-Time Interface) - służący do komunikacji z systemem dSpace.
+
+System dSpace DS 1005 zawierał nastepujące karty:
+- karta Master DS1005 - głowna jednostka obliczeniowa
+- karta Multi I/O DS2201 - wielofunkcyjna karta pomiarowa
+- karta wyjść analogowych DS2103
+- karta DS3001 - zliczanie impulsów z enkoderów
+
+\subsection{System wizyjny}
+\noindent Producent:\\
+Model:\\
+Parametry:\\
+\noindent \begin{tabular}{|l|l|} \hline
+{Rozdzielczość: }& \\ \hline
+{Szybkość: } &\\ \hline
+{Ilość klatek na sekundę: }&\\ \hline
+{Pole widzenia: }&\\ \hline
+{Formaty obrazu: }& \\ \hline
+{Oświetlenie: }& {brak} \\ \hline
+\end{tabular}
+\subsection{Inne}
+\noindent Stół o wymiarach:\\
+\begin{tabular}{|l|l|}\hline
+Wysokość: & \\ \hline
+Szerokość: & \\ \hline
+Długość: & \\ \hline
+\end{tabular}
+\section{Model sterownika w simulinku}
 \label{sec:modelWSimulinku}
+
+\subsection{Serwomechanizm}
+\label{subsec:Serwomechanizm}
+
+Sterowanie napędów zostało zrealizowane przez zamknięty układ sterowania, przedstawionym na poniższym schamcie. 
+%Wejściem układu było położenie kątowe złącza.
+
+%Schemat zamkniętego układu redulacji
+
+W~badanym przypadku zamknięcie sprzężenia zwrotnego odbywało się poprzez odczyt położenia kątowego z czujników umieszczonych w złączu. Dane te zostały odczytane przez moduł dSpace, a następnie poprzez bloczek .... zostały przekazane do modelu. Do sterowania wykorzystano regulator proporcjonalny. Ponieważ dla tego robota były realizowane zadania nadążąnia i~przestawiania, nie zastosowano członu całkującego, który zmiejszyłby zapas stabilności. Wartość współczynnika wzmocnienia została ustalona na podstawie przeprowadzonych eksperymtów opisanych w pozycji [?]. %zapytać z której publikacij wziąć nastawy P
+Sygnał sterujący był odpowiednio przetworzony przez następujące operacje:
+- ograniczenie sygnału (blok saturation) - silnik jak każdy obiekt rzeczywisty miał ograniczone wartości sterowania.
+- {} zamiana uchybu położenia na prędkość {} (blok mnożenia) - w zespole napędowym każdego złącza był silnik DC, w którym można sterować jego prędkością.
+- ograniczenie narastania sygnału (blok rate-limiter) - nie można było dopuścić do skokowej zmiany prędkości silnika, która mogłaby go uszkodzić.
+- normalizacja (blok gain2) -  karta DS2201 wymagała sygnału z przedziału (-0.3; 0.3)
+Dodatkowo wartość zadana była ograniczana (blok ograniczenia..), ze względu na zakresy ruchu każdej osi podane w {subsec:RobotPrzemyslowy}.
+Blok ``Position .. `` konwertuje sygnał z czujnika na położenie podane w stopniach.
+%Odniesienie do punktu label-RobotPrzemyslowy
+
+Parametry wejsciowe subsystemu:
+- ``pomiar.. `` - sygnał z czujnika położenia
+- ``predkosc `` - zadana prędkość podana w \%
+
+Parametry wejsciowe subsystemu:
+- ``sterowanie.. `` - sygnał sterujący silnikiem w~danym złączu 
+%Schemat serwa bez dodatków
+
+\subsection{Zatrzymanie}
+\label{subsec:Zatrzymanie}
+
+
+
+\susection{Sterowanie prędkością}
+\label{subsec:sterowaniePredkoscia}
+
+\subsection{Bazowanie}
+\label{subsec:Bazowanie}
+
+Czujniki położenia działały na zasadzie pomiaru różnicy od wartości początkowej. Do ich prawidłowego działania należało zaraz po włączeniu robota ustawić go w~określonej pozycji. W~tym celu w~każdym złączu znajdowały się cyfrowe czujniki położenia bazowego. Do bazowania wykorzystano następujący algorytm:
+1. Ręczne wysterowanie robota, tak aby się znalazł w~pozycji przedbazowej tzn. każde złącze znajdowało się w obszarze między czujnikiem bazowania, a określonym krańcem zakresu ruchu.
+2. Zadanie małej prędkości na każdy zespół napędowy w kierunku czujnika bazowania.
+3. W~chwili dotarcia do pozycji bazowej zatrzymanie złącza.
+4. Po ustawieniu każdego ramienia w~pozycji bazowej, zresetowanie czujników położenia.
+
+Powyższy algorytm został zrealizowany w Simulinku w następujący sposób.
+%Schemat bazowania
+Do wykonania tej operacji wykorzystano przerzutnik SR. Sygnał z przycisku rozpoczynającego bazowanie został podłączony do wejścia SET. Natmiast alternatywa odczytu z cyfrowego czujnika położenia i przycisku Stop do wejścia RESET. Zastosowanie tej operacji dawało kontrolę nad robotem w przypadku awarii. Zgodnie z zasadą działania przerzutnika po chwilowym pojawieniu się sygnału z przycisku rozpoczęcia bazowania wartość Q została ustawiona na 1. Ten sygnał został doprowadzany do przełącznika, który ustawił odpowiednie sterowanie. Kiedy złącze doszło do pozycji bazowej, odczyt z czujnika bazowego zminił się na 1 i wtedy sygnałem z wyjścia !Q czujnik położenia został zresetowany, a silnik zatrzymany.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Odwrotne zadanie kinematyki}
 \label{sec:odwrotneZadanieKinematyki}
