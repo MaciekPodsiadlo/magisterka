@@ -112,19 +112,35 @@ Parametry wejsciowe subsystemu:
 - ``sterowanie.. `` - sygnał sterujący silnikiem w~danym złączu 
 %Schemat serwa bez dodatków
 
-\subsection{Zatrzymanie}
-\label{subsec:Zatrzymanie}
+\subsection{Stop}
+\label{subsec:Stop}
 
+Zatrzymanie robota w dowolnym monencie było niezbędną częścią sterownika. Ta funkcja umożliwiała uniknięcie uszkodzenia robota lub innych przedmiotów w obszarze roboczym w przypadku awarii lub błedu operatora. To zadanie zrealizowano poprzez jednokrotne przypisanie aktualnego położenie do pozycji zadanej przez co uchyb ustalony zmniejszał się do zera i w efekcie sterowanie także się redukowało. W przypadku zatrzymania nie można było przypisać wprost zera do sterowania, ponieważ przerwałoby się pętle sprzężenia zwrotnego co skutkowałoby utratą kontroli.
+%Schemat
+Jednorazowe przypisanie do wartości zadanej zrealizowano poprzez subsystem wyzwalany zboczem rosnącym.
 
-
-\susection{Sterowanie prędkością}
+\subsection{Sterowanie prędkością}
 \label{subsec:sterowaniePredkoscia}
+
+Operator mógł sterować prędkością poprzez zadawanie jaka część szybkości maksymalnej miałbyć wykorzystany. Wybrany procent wybranej prędkości był mnozony przez wartość sterowania regulatora. Nie można było podać do toru sterowania konkretnej szybkości, ponieważ skutkowałoby nieprawidłowym działaniem regulatora.
+
+\subsection{Koordynacja ruchowa}
+\label{subsec:koordynacjaRuchowa}
+
+W sterowniku zaimplementowano koordynację ruchową (quasiliniowo). Celem jej działania było, żeby wszystkie zespoły napędowe rozpoczynały i kończyły wykonywanie ruchu w tym samym momencie. Zrealizowano to według poniższego algorytmu.
+1. Wyznaczenie modułu błędu dla każdego złącza |epsi|
+2. Znalezienie maksymalnego modułu błędu max|eps|
+3. Wyznaczenie współczynnika prędkości dla każdej osi wsp = |epsi|/max|eps|
+4. Ograniczenie wyliczonego współczynnika wsp do przedziału (0;1] 
+5. Pomnożenie wartości wzmocnienia przez wsp.
+Poniżej przedstawiono model działania tej operacji.
+%Schamet quasiliniowości
 
 \subsection{Bazowanie}
 \label{subsec:Bazowanie}
 
 Czujniki położenia działały na zasadzie pomiaru różnicy od wartości początkowej. Do ich prawidłowego działania należało zaraz po włączeniu robota ustawić go w~określonej pozycji. W~tym celu w~każdym złączu znajdowały się cyfrowe czujniki położenia bazowego. Do bazowania wykorzystano następujący algorytm:
-1. Ręczne wysterowanie robota, tak aby się znalazł w~pozycji przedbazowej tzn. każde złącze znajdowało się w obszarze między czujnikiem bazowania, a określonym krańcem zakresu ruchu.
+1. Ręczne wysterowanie robota, tak aby się znalazł w~pozycji przedbazowej tzn. każde złącze znajdowało się w obszarze między czujnikiem bazowania, a położeniem skrajnym.
 2. Zadanie małej prędkości na każdy zespół napędowy w kierunku czujnika bazowania.
 3. W~chwili dotarcia do pozycji bazowej zatrzymanie złącza.
 4. Po ustawieniu każdego ramienia w~pozycji bazowej, zresetowanie czujników położenia.
@@ -133,20 +149,7 @@ Powyższy algorytm został zrealizowany w Simulinku w następujący sposób.
 %Schemat bazowania
 Do wykonania tej operacji wykorzystano przerzutnik SR. Sygnał z przycisku rozpoczynającego bazowanie został podłączony do wejścia SET. Natmiast alternatywa odczytu z cyfrowego czujnika położenia i przycisku Stop do wejścia RESET. Zastosowanie tej operacji dawało kontrolę nad robotem w przypadku awarii. Zgodnie z zasadą działania przerzutnika po chwilowym pojawieniu się sygnału z przycisku rozpoczęcia bazowania wartość Q została ustawiona na 1. Ten sygnał został doprowadzany do przełącznika, który ustawił odpowiednie sterowanie. Kiedy złącze doszło do pozycji bazowej, odczyt z czujnika bazowego zminił się na 1 i wtedy sygnałem z wyjścia !Q czujnik położenia został zresetowany, a silnik zatrzymany.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\section{Proste zadanie kinematyki}
 
 \section{Odwrotne zadanie kinematyki}
 \label{sec:odwrotneZadanieKinematyki}
