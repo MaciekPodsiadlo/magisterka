@@ -6,18 +6,18 @@
 
 \subsection{Robot przmysłowy}
 \label{sebsec:RobotPrzemyslowy}
-\noindent Producent: Mazowieckie Zakłady Automatyki Przemysłowej\\
+\noindent Producent: Zakłady Automatyki Przemysłowej Ostrów Wielkopolski\\
 Model: IRp-6\\
 Parametry:\\
 \begin{tabular}{|l|l|l|} \hline
-\multicolumn{2}{|l|}{Osie sterowane: }& 5 \\ \hline
-\multicolumn{2}{|l|}{Kontrolery: }& \\ \hline
-\multicolumn{2}{|l|}{Maksymalne obciążenie kiści: } & \\ \hline
-\multicolumn{2}{|l|}{Powtarzalność: }& \\ \hline
-\multicolumn{2}{|l|}{Masa jednostki mechanicznej: }& \\ \hline
+\multicolumn{2}{|l|}{Osie sterowane: }& {5} \\ \hline
+\multicolumn{2}{|l|}{Kontrolery: }& {USR-6}\\ \hline
+\multicolumn{2}{|l|}{Maksymalne obciążenie: } & {6 kg}\\ \hline
+\multicolumn{2}{|l|}{Powtarzalność: }& {+-0,20 mm}\\ \hline
+\multicolumn{2}{|l|}{Masa jednostki mechanicznej: }& {125 kg}\\ \hline
 \multicolumn{2}{|l|}{Zasięg: }& \\ \hline
-{Zakres ruchu:} & {Oś1:} & \+- 160 \\ \cline{2-3}
-& Oś2: & \+- 40 \\ \cline{2-3}
+{Zakres ruchu:} & {Oś1:} & {+- 160} \\ \cline{2-3}
+& Oś2: & +- 40 \\ \cline{2-3}
 & Oś3: & -25..+40\\ \cline{2-3}
 & Oś4: & -25..+120\\ \cline{2-3}
 & Oś5: & -25..+150\\ \hline
@@ -26,11 +26,11 @@ Prędkość maksymalna: & Oś1: & 60 \\ \cline{2-3}
 & Oś3: & 60 \\ \cline{2-3}
 & Oś4: & 75 \\ \cline{2-3}
 & Oś5: & 125\\ \hline
-Moment: & Oś1: & \\ \cline{2-3}
-& Oś2: & \\ \cline{2-3}
-& Oś3: & \\ \cline{2-3}
-& Oś4: & \\ \cline{2-3}
-& Oś5: & \\ \hline
+%Moment: & Oś1: & \\ \cline{2-3}
+%& Oś2: & \\ \cline{2-3}
+%& Oś3: & \\ \cline{2-3}
+%& Oś4: & \\ \cline{2-3}
+%& Oś5: & \\ \hline
 \end{tabular}
 
 \vspace{5mm}
@@ -48,21 +48,28 @@ Prędkość [m/s]: & \\ \hline
 \end{tabular}
 \subsection{Sterowanie}
 Sterownie robotem odbywało się przez system modułowy dSpace DS1005. Komputer PC połaczony z tym systemem przez magistralę AT-bus, pełnił rolę prototypowania sterownika. W programie Matlab/Simulink utowrzony został sterownik robota, który przekonwetowany na kod źródłowy w języku C przez narzędzie RTW (Real-Time Workshop), został skopmilowany, zlinkowany oraz wgrany do karty procesowej DS1005 z procesorem sygnałowym za pomocą modułu RTI (Real-Time Interface). Ponadto uruchomiony w komputerze progrm ControlDesk, był interface'm graficznym  między sterownikiem a użytkownikiem, działającym w czasie pracy robota. Za pomocą tego programu wprowadzano potrzebne parametry do odpowiedniej pracy robota.
+
+
 \noindent 
 Komputer PC:\\
 System operacyjny: Windows 2000 Serwer\\
 Procesor:\\
 Pamięć RAM:\\
-Oprogramowanie:
-- Matlab 2007b z bibliotekami: Simulink (służący do prototypowania sterownika), Iamge Prcessing Toolbox (do przetwarzania obrazu) oraz RTW (generacji kodu źródłowego z modelu Simulink) ;
-- Program ControlDesk - interface graficzny między operatorem, a sterownikiem;
-- Moduł RTI (Real-Time Interface) - służący do komunikacji z systemem dSpace.
+
+\noindent Oprogramowanie:
+\begin{itemize}
+\item Matlab 2007b z bibliotekami: Simulink (służący do prototypowania sterownika), Iamge Prcessing Toolbox (do przetwarzania obrazu) oraz RTW (generacji kodu źródłowego z modelu Simulink) ;
+\item Program ControlDesk - interface graficzny między operatorem, a sterownikiem;
+\item Moduł RTI (Real-Time Interface) - służący do komunikacji z systemem dSpace.
+\end{itemize}
 
 System dSpace DS 1005 zawierał nastepujące karty:
-- karta Master DS1005 - głowna jednostka obliczeniowa
-- karta Multi I/O DS2201 - wielofunkcyjna karta pomiarowa
-- karta wyjść analogowych DS2103
-- karta DS3001 - zliczanie impulsów z enkoderów
+\begin{itemize}
+\item karta Master DS1005 - głowna jednostka obliczeniowa
+\item karta Multi I/O DS2201 - wielofunkcyjna karta pomiarowa
+\item karta wyjść analogowych DS2103
+\item karta DS3001 - zliczanie impulsów z enkoderów
+\end{itemize}
 
 \subsection{System wizyjny}
 \noindent Producent:\\
@@ -79,9 +86,9 @@ Parametry:\\
 \subsection{Inne}
 \noindent Stół o wymiarach:\\
 \begin{tabular}{|l|l|}\hline
-Wysokość: & \\ \hline
-Szerokość: & \\ \hline
-Długość: & \\ \hline
+Wysokość: & 0,72 m\\ \hline
+Szerokość: & 0,8 m\\ \hline
+Długość: & 1,2 m\\ \hline
 \end{tabular}
 \section{Model sterownika w simulinku}
 \label{sec:modelWSimulinku}
@@ -89,27 +96,30 @@ Długość: & \\ \hline
 \subsection{Serwomechanizm}
 \label{subsec:Serwomechanizm}
 
-Sterowanie napędów zostało zrealizowane przez zamknięty układ sterowania, przedstawionym na poniższym schamcie. 
-%Wejściem układu było położenie kątowe złącza.
+Sterowanie napędów zostało zrealizowane przez zamknięty układ sterowania, przedstawionym na poniższym schemacie. %Wejściem układu było położenie kątowe złącza.
 
 %Schemat zamkniętego układu redulacji
 
-W~badanym przypadku zamknięcie sprzężenia zwrotnego odbywało się poprzez odczyt położenia kątowego z czujników umieszczonych w złączu. Dane te zostały odczytane przez moduł dSpace, a następnie poprzez bloczek .... zostały przekazane do modelu. Do sterowania wykorzystano regulator proporcjonalny. Ponieważ dla tego robota były realizowane zadania nadążąnia i~przestawiania, nie zastosowano członu całkującego, który zmiejszyłby zapas stabilności. Wartość współczynnika wzmocnienia została ustalona na podstawie przeprowadzonych eksperymtów opisanych w pozycji [?]. %zapytać z której publikacij wziąć nastawy P
+W~badanym przypadku zamknięcie sprzężenia zwrotnego odbywało się poprzez odczyt położenia kątowego z czujników umieszczonych w złączu. Dane te zostały odczytane przez moduł dSpace, a następnie poprzez block .... zostały przekazane do modelu. Do sterowania wykorzystano regulator proporcjonalny. Ponieważ dla tego robota były realizowane zadania nadążąnia i~przestawiania, nie zastosowano członu całkującego, który zmiejszyłby zapas stabilności. Wartość współczynnika wzmocnienia została ustalona na podstawie przeprowadzonych eksperymtów opisanych w pozycji [?]. %zapytać z której publikacij wziąć nastawy P
 Sygnał sterujący był odpowiednio przetworzony przez następujące operacje:
-- ograniczenie sygnału (blok saturation) - silnik jak każdy obiekt rzeczywisty miał ograniczone wartości sterowania.
-- {} zamiana uchybu położenia na prędkość {} (blok mnożenia) - w zespole napędowym każdego złącza był silnik DC, w którym można sterować jego prędkością.
-- ograniczenie narastania sygnału (blok rate-limiter) - nie można było dopuścić do skokowej zmiany prędkości silnika, która mogłaby go uszkodzić.
-- normalizacja (blok gain2) -  karta DS2201 wymagała sygnału z przedziału (-0.3; 0.3)
-Dodatkowo wartość zadana była ograniczana (blok ograniczenia..), ze względu na zakresy ruchu każdej osi podane w {subsec:RobotPrzemyslowy}.
+\begin{itemize}
+\item ograniczenie sygnału (blok saturation) - silnik jak każdy obiekt rzeczywisty miał ograniczone wartości sterowania.
+\item {} zamiana uchybu położenia na prędkość {} (blok mnożenia) - w zespole napędowym każdego złącza był silnik DC, w którym można sterować jego prędkością.
+\item ograniczenie narastania sygnału (blok rate-limiter) - nie można było dopuścić do skokowej zmiany prędkości silnika, która mogłaby go uszkodzić.
+\item normalizacja (blok gain2) -  karta DS2201 wymagała sygnału z przedziału (-0.3; 0.3)
+\end{itemize}
+Dodatkowo wartość zadana była ograniczana (blok ograniczenia..), ze względu na zakresy ruchu każdej osi podane w rozdziale \ref{sebsec:RobotPrzemyslowy}.
 Blok ``Position .. `` konwertuje sygnał z czujnika na położenie podane w stopniach.
-%Odniesienie do punktu label-RobotPrzemyslowy
 
-Parametry wejsciowe subsystemu:
-- ``pomiar.. `` - sygnał z czujnika położenia
-- ``predkosc `` - zadana prędkość podana w \%
-
-Parametry wejsciowe subsystemu:
-- ``sterowanie.. `` - sygnał sterujący silnikiem w~danym złączu 
+\noindent Parametry wejsciowe subsystemu:
+\begin{itemize}
+\item``pomiar.. `` - sygnał z czujnika położenia
+\item ``predkosc `` - zadana prędkość podana w \%
+\end{itemize}
+\noindent Parametry wejsciowe subsystemu:
+\begin{itemize}
+\item ``sterowanie.. `` - sygnał sterujący silnikiem w~danym złączu 
+\end{itemize}
 %Schemat serwa bez dodatków
 
 \subsection{Stop}
@@ -128,11 +138,13 @@ Operator mógł sterować prędkością poprzez zadawanie jaka część szybkoś
 \label{subsec:koordynacjaRuchowa}
 
 W sterowniku zaimplementowano koordynację ruchową (quasiliniowo). Celem jej działania było, żeby wszystkie zespoły napędowe rozpoczynały i kończyły wykonywanie ruchu w tym samym momencie. Zrealizowano to według poniższego algorytmu.
-1. Wyznaczenie modułu błędu dla każdego złącza |epsi|
-2. Znalezienie maksymalnego modułu błędu max|eps|
-3. Wyznaczenie współczynnika prędkości dla każdej osi wsp = |epsi|/max|eps|
-4. Ograniczenie wyliczonego współczynnika wsp do przedziału (0;1] 
-5. Pomnożenie wartości wzmocnienia przez wsp.
+\begin{enumerate}
+\item Wyznaczenie modułu błędu dla każdego złącza |epsi|
+\item Znalezienie maksymalnego modułu błędu max|eps|
+\item Wyznaczenie współczynnika prędkości dla każdej osi wsp = |epsi|/max|eps|
+\item Ograniczenie wyliczonego współczynnika wsp do przedziału (0;1] 
+\item Pomnożenie wartości wzmocnienia przez wsp.
+\end{enumerate}
 Poniżej przedstawiono model działania tej operacji.
 %Schamet quasiliniowości
 
@@ -140,16 +152,107 @@ Poniżej przedstawiono model działania tej operacji.
 \label{subsec:Bazowanie}
 
 Czujniki położenia działały na zasadzie pomiaru różnicy od wartości początkowej. Do ich prawidłowego działania należało zaraz po włączeniu robota ustawić go w~określonej pozycji. W~tym celu w~każdym złączu znajdowały się cyfrowe czujniki położenia bazowego. Do bazowania wykorzystano następujący algorytm:
-1. Ręczne wysterowanie robota, tak aby się znalazł w~pozycji przedbazowej tzn. każde złącze znajdowało się w obszarze między czujnikiem bazowania, a położeniem skrajnym.
-2. Zadanie małej prędkości na każdy zespół napędowy w kierunku czujnika bazowania.
-3. W~chwili dotarcia do pozycji bazowej zatrzymanie złącza.
-4. Po ustawieniu każdego ramienia w~pozycji bazowej, zresetowanie czujników położenia.
-
+\begin{enumerate}
+\item Ręczne wysterowanie robota, tak aby się znalazł w~pozycji przedbazowej tzn. każde złącze znajdowało się w obszarze między czujnikiem bazowania, a położeniem skrajnym.
+\item Zadanie małej prędkości na każdy zespół napędowy w kierunku czujnika bazowania.
+\item W~chwili dotarcia do pozycji bazowej zatrzymanie złącza.
+\item Po ustawieniu każdego ramienia w~pozycji bazowej, zresetowanie czujników położenia.
+\end{enumerate}
 Powyższy algorytm został zrealizowany w Simulinku w następujący sposób.
 %Schemat bazowania
 Do wykonania tej operacji wykorzystano przerzutnik SR. Sygnał z przycisku rozpoczynającego bazowanie został podłączony do wejścia SET. Natmiast alternatywa odczytu z cyfrowego czujnika położenia i przycisku Stop do wejścia RESET. Zastosowanie tej operacji dawało kontrolę nad robotem w przypadku awarii. Zgodnie z zasadą działania przerzutnika po chwilowym pojawieniu się sygnału z przycisku rozpoczęcia bazowania wartość Q została ustawiona na 1. Ten sygnał został doprowadzany do przełącznika, który ustawił odpowiednie sterowanie. Kiedy złącze doszło do pozycji bazowej, odczyt z czujnika bazowego zminił się na 1 i wtedy sygnałem z wyjścia !Q czujnik położenia został zresetowany, a silnik zatrzymany.
 
 \section{Proste zadanie kinematyki}
 
+Niezbedne do sterowania robotem była zamiana współrzędnych złączowych na współrzędne kartezjańskie. W tym celu rozwiązano proste zadanie kinematyki. 
+Ponieżej przedstawiono schemat łańcucha kinematycznego, razem z wyznaczonymi układami współrzędnych złączowych według notacji Denavita-Hartenberga. Jako początek głównego układu współrzędnych przyjęto miejsce przecięcia się osi środkowej z podłożej, w pozycji bazowej robota.
+%Schemat z Worda
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{r|c c c c}
+& $\alpha$ & a & d & $\Theta$ \\ \hline
+1 & 0 & 0 & $d_1$ & 0 \\
+1 & 0 & 0 & $p_1$ & $\Theta_1$ \\
+1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 \\
+\end{tabular}
+\caption{Parametry złączy}
+\end{center}
+\end{table}
+
+Macierze przekształcenia dla poszczególnych złączy:
+
+\vspace{5mm}
+
+$A_1 = 
+\begin{bmatrix}
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+\end{bmatrix}$
+$A_2 = 
+\begin{bmatrix}
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+\end{bmatrix}$
+$A_3 = 
+\begin{bmatrix}
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+\end{bmatrix}$
+
+$A_4 = 
+\begin{bmatrix}
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+\end{bmatrix}$
+$A_5 = 
+\begin{bmatrix}
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+\end{bmatrix}$
+$A_6 = 
+\begin{bmatrix}
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+\end{bmatrix}$
+
+\vspace{5 mm}
+
+Macierz przekształcenia:
+
+\vspace{5 mm}
+
+$T_0^6 = 
+\begin{bmatrix}
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+\end{bmatrix}$
+
+\vspace{5 mm}
+
+Na podstawie wyliczononej macierzy przeszktałceń można było zapisać funkcje wyznaczające współrzędne końcówki roboczej w układzie kartezjańskim:
+
+\noindent
+$x = dd \\
+y = gg \\
+z = hh \\$
+
+\newpage
 \section{Odwrotne zadanie kinematyki}
 \label{sec:odwrotneZadanieKinematyki}
