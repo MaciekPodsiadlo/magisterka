@@ -170,13 +170,13 @@ Ponieżej przedstawiono schemat łańcucha kinematycznego, razem z wyznaczonymi 
 \begin{table}[h]
 \begin{center}
 \begin{tabular}{r|c c c c}
-& $\alpha$ & a & d & $\Theta$ \\ \hline
-1 & 0 & 0 & $d_1$ & 0 \\
-1 & 0 & 0 & $p_1$ & $\Theta_1$ \\
-1 & 0 & 0 & 0 & 0 \\
-1 & 0 & 0 & 0 & 0 \\
-1 & 0 & 0 & 0 & 0 \\
-1 & 0 & 0 & 0 & 0 \\
+   & $\alpha$ 	& a 		& d 		& $\Theta$ 			\\ \hline
+1 & $\pi/2$ 	& 0 		& $d_1$ 	& 0 					\\
+2 & $\pi/2$ 	& 0 		& $p_1$ 	& $\Theta_2+\pi/2$ 	\\
+3 & 0 		& $p_2$ 	& 0  	& $\Theta_3+\pi/2$ 	\\
+4 & 0 		& $p_3$ 	& 0 		& $\Theta_4-\pi/2$ 	\\
+5 & $-\pi/2$ 	& 0		& 0 		& $\Theta_5$			\\
+6 & 0 		& 0 		& $p_4$	& $\Theta_6-\pi/2$		\\
 \end{tabular}
 \caption{Parametry złączy}
 \end{center}
@@ -188,46 +188,46 @@ Macierze przekształcenia dla poszczególnych złączy:
 
 $A_1 = 
 \begin{bmatrix}
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 1 \\
+1 		& 0 		& 0 		& 0 		\\
+0 		& 0 		& -1		& 0 		\\
+0 		& 1		& 0 		& $d_1$	\\
+0 		& 0 		& 0 		& 1 		\\
 \end{bmatrix}$
 $A_2 = 
 \begin{bmatrix}
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 1 \\
+$-\sin \Theta_2$	& 0 		& $-\sin \Theta_2$	& 0 		\\
+$\cos \Theta_2$	& 0 		& $\cos \Theta_2$	& 0 		\\
+0 				& 1 		& 0 				& $p_1$	\\
+0 				& 0 		& 0 				& 1 		\\
 \end{bmatrix}$
 $A_3 = 
 \begin{bmatrix}
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 1 \\
+$-\sin \Theta_3$ 	& $-\cos \Theta_3$& 0 		& $-p_2\sin \Theta_3$ 	\\
+$\cos \Theta_3$	& $-\sin \Theta_3$ & 0 		& $p_2\cos \Theta_3$ 	\\
+0 				& 0 				& 1 		& 0 					\\
+0 				& 0 				& 0 		& 1 					\\
 \end{bmatrix}$
 
 $A_4 = 
 \begin{bmatrix}
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 1 \\
+$\sin \Theta_4$ 	& $\cos \Theta_4$& 0 		& $p_3\sin \Theta_4$ 	\\
+$-\cos \Theta_4$	& $\sin \Theta_4$ & 0 		& $-p_3\cos \Theta_4$ 	\\
+0 				& 0 				& 1 		& 0 					\\
+0 				& 0 				& 0 		& 1 					\\
 \end{bmatrix}$
 $A_5 = 
 \begin{bmatrix}
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 1 \\
+$\cos \Theta_5$	& 0 		& $-\sin \Theta_5$ & 0 		\\
+$\sin \Theta_5$ 	& 0 		& $\cos \Theta_5$ & 0 		\\
+0 				& -1 	& 0 				& 0 		\\
+0 				& 0 		& 0 				& 1 		\\
 \end{bmatrix}$
 $A_6 = 
 \begin{bmatrix}
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 1 \\
+$\sin \Theta_6$ 	& $\cos \Theta_6$& 0 		& 0 		\\
+$-\cos \Theta_6$	& $\sin \Theta_6$ & 0 		& 0 		\\
+0 				& 0 				& 1 		& $p_4$	\\
+0 				& 0 				& 0 		& 1 		\\
 \end{bmatrix}$
 
 \vspace{5 mm}
