@@ -1,6 +1,7 @@
 function [Output] = to_Binary (Input)
 % Wyciecie tla i przekszta³cenie obrazu w obiekt binarny
 
+figure(1);
 [counts,x] = imhist(Input);
 stem(x,counts);
 
