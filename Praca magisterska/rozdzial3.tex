@@ -35,7 +35,7 @@ Prędkość maksymalna: & Oś1: & 60 \\ \cline{2-3}
 
 \vspace{5mm}
 
-Podstawa robota została umieszczmona na napędzie lniowym, w celu poszerzenia obszaru roboczego, tak aby pokrywał się on z polem widzenia systemu wizyjnego.\\
+Podstawa robota została umieszczona na napędzie lniowym, w celu poszerzenia obszaru roboczego, tak aby pokrywał się on z polem widzenia systemu wizyjnego.\\
 Parametry:\\
 \begin{tabular}{|l|l|}\hline
 Napęd: & Elektryczny napęd liniowy ze śrubą \\ \hline
@@ -51,7 +51,7 @@ Sterownie robotem odbywało się przez system modułowy dSpace DS1005. Komputer 
 
 
 \noindent 
-Komputer PC:\\
+Komputer klasy PC\\
 System operacyjny: Windows 2000 Serwer\\
 Procesor:\\
 Pamięć RAM:\\
@@ -90,6 +90,7 @@ Wysokość: & 0,72 m\\ \hline
 Szerokość: & 0,8 m\\ \hline
 Długość: & 1,2 m\\ \hline
 \end{tabular}
+\newpage
 \section{Model sterownika w simulinku}
 \label{sec:modelWSimulinku}
 
@@ -98,9 +99,15 @@ Długość: & 1,2 m\\ \hline
 
 Sterowanie napędów zostało zrealizowane przez zamknięty układ sterowania, przedstawionym na poniższym schemacie. %Wejściem układu było położenie kątowe złącza.
 
-%Schemat zamkniętego układu redulacji
+%
+\begin{figure}
+\centering
+\includegraphics[width=16cm] {dodatki/zamkiety_ukl_reg_wyciete.jpg}
+\caption{Schemat zamkniętego układu redulacji}
+\label{fig:zamkiety_ukl_reg_wyciete}
+\end{figure}
 
-W~badanym przypadku zamknięcie sprzężenia zwrotnego odbywało się poprzez odczyt położenia kątowego z czujników umieszczonych w złączu. Dane te zostały odczytane przez moduł dSpace, a następnie poprzez block .... zostały przekazane do modelu. Do sterowania wykorzystano regulator proporcjonalny. Ponieważ dla tego robota były realizowane zadania nadążąnia i~przestawiania, nie zastosowano członu całkującego, który zmiejszyłby zapas stabilności. Wartość współczynnika wzmocnienia została ustalona na podstawie przeprowadzonych eksperymtów opisanych w pozycji [?]. %zapytać z której publikacij wziąć nastawy P
+W~badanym przypadku zamknięcie sprzężenia zwrotnego odbywało się poprzez odczyt położenia kątowego z czujników umieszczonych w złączu. Dane te zostały odczytane przez moduł dSpace, a następnie poprzez blok DS2201ADC\_B1 zostały przekazane do modelu. Do sterowania wykorzystano regulator proporcjonalny. Ponieważ dla tego robota były realizowane zadania nadążąnia i~przestawiania, nie zastosowano członu całkującego, który zmiejszyłby zapas stabilności. Wartość współczynnika wzmocnienia została ustalona na podstawie przeprowadzonych eksperymtów opisanych w pozycji [?]. %zapytać z której publikacij wziąć nastawy P
 Sygnał sterujący był odpowiednio przetworzony przez następujące operacje:
 \begin{itemize}
 \item ograniczenie sygnału (blok saturation) - silnik jak każdy obiekt rzeczywisty miał ograniczone wartości sterowania.
@@ -120,13 +127,30 @@ Blok ``Position .. `` konwertuje sygnał z czujnika na położenie podane w stop
 \begin{itemize}
 \item ``sterowanie.. `` - sygnał sterujący silnikiem w~danym złączu 
 \end{itemize}
-%Schemat serwa bez dodatków
+
+\begin{figure}
+\centering
+\includegraphics[width=16cm] {dodatki/bez_dodatkow2_wyciete.jpg}
+\caption{Schemat serwomechanizmu bez dodatków}
+\label{fig:bez_dodatkow2_wyciete}
+\end{figure}
 
 \subsection{Stop}
 \label{subsec:Stop}
 
 Zatrzymanie robota w dowolnym monencie było niezbędną częścią sterownika. Ta funkcja umożliwiała uniknięcie uszkodzenia robota lub innych przedmiotów w obszarze roboczym w przypadku awarii lub błedu operatora. To zadanie zrealizowano poprzez jednokrotne przypisanie aktualnego położenie do pozycji zadanej przez co uchyb ustalony zmniejszał się do zera i w efekcie sterowanie także się redukowało. W przypadku zatrzymania nie można było przypisać wprost zera do sterowania, ponieważ przerwałoby się pętle sprzężenia zwrotnego co skutkowałoby utratą kontroli.
-%Schemat
+
+\begin{figure}
+\centering
+\subfloat[stop]{\label{stop_wyciete}
+\includegraphics[width=0.7\textwidth]{dodatki/stop_wyciete.jpg}}
+\quad
+\subfloat[subsystem: blok stopu]{\label{stop_wyciete2}
+\includegraphics[width=0.2\textwidth]{dodatki/stop_wyciete2.jpg}}
+\caption{Mechanizm stopu}
+\label{fig:mechanizm_stopu}
+\end{figure}
+
 Jednorazowe przypisanie do wartości zadanej zrealizowano poprzez subsystem wyzwalany zboczem rosnącym.
 
 \subsection{Sterowanie prędkością}
@@ -146,7 +170,15 @@ W sterowniku zaimplementowano koordynację ruchową (quasiliniowo). Celem jej dz
 \item Pomnożenie wartości wzmocnienia przez wsp.
 \end{enumerate}
 Poniżej przedstawiono model działania tej operacji.
-%Schamet quasiliniowości
+%i
+
+\begin{figure}
+\centering
+\includegraphics[width=12cm] {dodatki/quasiliniowosc_p2_wyciete.jpg}
+\caption{Schamet quasiliniowości}
+\label{fig:schamet_quasiliniowosci}
+\end{figure}
+Wejścia E1, E2, E3 zawierały różnicę między wartością zadaną, a wartością aktualną. Natomiast wyjścia wspE1, wspE2, wspE3 są podowane do serwomechanizmu jako mnożnik prędkości.
 
 \subsection{Bazowanie}
 \label{subsec:Bazowanie}
@@ -159,7 +191,15 @@ Czujniki położenia działały na zasadzie pomiaru różnicy od wartości pocz�
 \item Po ustawieniu każdego ramienia w~pozycji bazowej, zresetowanie czujników położenia.
 \end{enumerate}
 Powyższy algorytm został zrealizowany w Simulinku w następujący sposób.
-%Schemat bazowania
+
+\begin{figure}
+\centering
+\includegraphics[width=12cm] {dodatki/bazowanie_p1_wyciete.jpg}
+\caption{Schemat bazowania}
+\label{fig:schemat_bazowania}
+\end{figure}
+W bloku zerowanie, wartość 0 została przypisana do odpowiednich zmiennych. 
+
 Do wykonania tej operacji wykorzystano przerzutnik SR. Sygnał z przycisku rozpoczynającego bazowanie został podłączony do wejścia SET. Natmiast alternatywa odczytu z cyfrowego czujnika położenia i przycisku Stop do wejścia RESET. Zastosowanie tej operacji dawało kontrolę nad robotem w przypadku awarii. Zgodnie z zasadą działania przerzutnika po chwilowym pojawieniu się sygnału z przycisku rozpoczęcia bazowania wartość Q została ustawiona na 1. Ten sygnał został doprowadzany do przełącznika, który ustawił odpowiednie sterowanie. Kiedy złącze doszło do pozycji bazowej, odczyt z czujnika bazowego zminił się na 1 i wtedy sygnałem z wyjścia !Q czujnik położenia został zresetowany, a silnik zatrzymany.
 
 \section{Proste zadanie kinematyki}
@@ -190,43 +230,43 @@ $A_1 =
 \begin{bmatrix}
 1 		& 0 		& 0 		& 0 		\\
 0 		& 0 		& -1		& 0 		\\
-0 		& 1		& 0 		& $d_1$	\\
+0 		& 1		& 0 		& d_1	\\
 0 		& 0 		& 0 		& 1 		\\
 \end{bmatrix}$
 $A_2 = 
 \begin{bmatrix}
-$-\sin \Theta_2$	& 0 		& $-\sin \Theta_2$	& 0 		\\
-$\cos \Theta_2$	& 0 		& $\cos \Theta_2$	& 0 		\\
-0 				& 1 		& 0 				& $p_1$	\\
+-\sin \Theta_2		& 0 		& -\sin \Theta_2	& 0 		\\
+\cos \Theta_2		& 0 		& \cos \Theta_2	& 0 		\\
+0 				& 1 		& 0 				& p_1	\\
 0 				& 0 		& 0 				& 1 		\\
 \end{bmatrix}$
 $A_3 = 
 \begin{bmatrix}
-$-\sin \Theta_3$ 	& $-\cos \Theta_3$& 0 		& $-p_2\sin \Theta_3$ 	\\
-$\cos \Theta_3$	& $-\sin \Theta_3$ & 0 		& $p_2\cos \Theta_3$ 	\\
+-\sin \Theta_3 	& -\cos \Theta_3	& 0 		& -p_2\sin \Theta_3 	\\
+\cos \Theta_3		& -\sin \Theta_3	& 0 		& p_2\cos \Theta_3 	\\
 0 				& 0 				& 1 		& 0 					\\
 0 				& 0 				& 0 		& 1 					\\
 \end{bmatrix}$
 
 $A_4 = 
 \begin{bmatrix}
-$\sin \Theta_4$ 	& $\cos \Theta_4$& 0 		& $p_3\sin \Theta_4$ 	\\
-$-\cos \Theta_4$	& $\sin \Theta_4$ & 0 		& $-p_3\cos \Theta_4$ 	\\
+\sin \Theta_4 		& \cos \Theta_4	& 0 		& p_3\sin \Theta_4 	\\
+-\cos \Theta_4	& \sin \Theta_4 	& 0 		& -p_3\cos \Theta_4 	\\
 0 				& 0 				& 1 		& 0 					\\
 0 				& 0 				& 0 		& 1 					\\
 \end{bmatrix}$
 $A_5 = 
 \begin{bmatrix}
-$\cos \Theta_5$	& 0 		& $-\sin \Theta_5$ & 0 		\\
-$\sin \Theta_5$ 	& 0 		& $\cos \Theta_5$ & 0 		\\
+\cos \Theta_5		& 0 		& -\sin \Theta_5	 & 0 		\\
+\sin \Theta_5	 	& 0 		& \cos \Theta_5 	& 0 		\\
 0 				& -1 	& 0 				& 0 		\\
 0 				& 0 		& 0 				& 1 		\\
 \end{bmatrix}$
 $A_6 = 
 \begin{bmatrix}
-$\sin \Theta_6$ 	& $\cos \Theta_6$& 0 		& 0 		\\
-$-\cos \Theta_6$	& $\sin \Theta_6$ & 0 		& 0 		\\
-0 				& 0 				& 1 		& $p_4$	\\
+\sin \Theta_6	 	& \cos \Theta_6	& 0 		& 0 		\\
+-\cos \Theta_6	& \sin \Theta_6	& 0 		& 0 		\\
+0 				& 0 				& 1 		& p_4	\\
 0 				& 0 				& 0 		& 1 		\\
 \end{bmatrix}$
 
@@ -234,17 +274,17 @@ $-\cos \Theta_6$	& $\sin \Theta_6$ & 0 		& 0 		\\
 
 Macierz przekształcenia:
 
-\vspace{5 mm}
-
-$T_0^6 = 
+$T_0^6=
 \begin{bmatrix}
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 1 \\
+t_{11}		& t_{12}	& t_{13}	& t_{14}	\\
+t_{21}		& t_{22}	& t_{23}	& t_{24}	\\
+t_{31}		& t_{32}	& t_{33}	& t_{34}	\\
+0		& 0		& 0		& 1	\\
 \end{bmatrix}$
 
 \vspace{5 mm}
+
+$t_{11} = \cos \Theta_2 \cos \Theta_6 - \sin \Theta_6 (\cos \Theta_5 (\cos \Theta_3 \cos \Theta_4 \sin \Theta_2 - \sin \Theta_2 \sin \Theta_3 \sin \Theta_4) - \sin \Theta_5 (\cos \Theta_3 \sin \Theta_2 \sin \Theta_4 + \cos \Theta_4 \sin \Theta_2 \sin \Theta_3))$
 
 Na podstawie wyliczononej macierzy przeszktałceń można było zapisać funkcje wyznaczające współrzędne końcówki roboczej w układzie kartezjańskim:
 
@@ -256,3 +296,4 @@ z = hh \\$
 \newpage
 \section{Odwrotne zadanie kinematyki}
 \label{sec:odwrotneZadanieKinematyki}
+
