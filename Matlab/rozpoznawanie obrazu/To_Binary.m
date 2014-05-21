@@ -7,7 +7,7 @@ stem(x,counts);
 
 [max_hist, max_hist_locs] = max(counts);
 counts2 = max_hist - counts;
-[peaks, locs] = findpeaks(counts2, 'MINPEAKHEIGHT', 0.97*max_hist);
+[peaks, locs] = findpeaks(counts2, 'MINPEAKHEIGHT', 0.96*max_hist);
 locs_left = find(locs < max_hist_locs);
 locs_right = find(locs > max_hist_locs);
 treshold_left = x(locs(locs_left(end)));

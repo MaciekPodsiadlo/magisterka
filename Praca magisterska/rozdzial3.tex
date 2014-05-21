@@ -35,7 +35,7 @@ Prędkość maksymalna: & Oś1: & 60 \\ \cline{2-3}
 
 \vspace{5mm}
 
-Podstawa robota została umieszczona na napędzie lniowym, w celu poszerzenia obszaru roboczego, tak aby pokrywał się on z polem widzenia systemu wizyjnego.\\
+Podstawa robota została umieszczona na napędzie liniowym, w celu poszerzenia obszaru roboczego, tak aby pokrywał się on z polem widzenia systemu wizyjnego.\\
 Parametry:\\
 \begin{tabular}{|l|l|}\hline
 Napęd: & Elektryczny napęd liniowy ze śrubą \\ \hline
@@ -202,7 +202,15 @@ W bloku zerowanie, wartość 0 została przypisana do odpowiednich zmiennych.
 
 Do wykonania tej operacji wykorzystano przerzutnik SR. Sygnał z przycisku rozpoczynającego bazowanie został podłączony do wejścia SET. Natmiast alternatywa odczytu z cyfrowego czujnika położenia i przycisku Stop do wejścia RESET. Zastosowanie tej operacji dawało kontrolę nad robotem w przypadku awarii. Zgodnie z zasadą działania przerzutnika po chwilowym pojawieniu się sygnału z przycisku rozpoczęcia bazowania wartość Q została ustawiona na 1. Ten sygnał został doprowadzany do przełącznika, który ustawił odpowiednie sterowanie. Kiedy złącze doszło do pozycji bazowej, odczyt z czujnika bazowego zminił się na 1 i wtedy sygnałem z wyjścia !Q czujnik położenia został zresetowany, a silnik zatrzymany.
 
+\section{Przestrzeń robocza}
+\label{sec:przestrzen_robocza}
+
+Jak wspomniano w \ref{subsec:RobotPrzemyslowy} podstawę manipulatora umieszczono na napędzie liniowym, co znacznie zwiększyło jego powierzchnię roboczą. 
+Poniżej przedstawiono przestrzeń roboczą dla wysokości 865 mm dla robota IRp-6 bez dodatkowego złącza pryzmatycznego oraz z nim.
+
+
 \section{Proste zadanie kinematyki}
+\label{sec:proste_zad_kinematyki}
 
 Niezbedne do sterowania robotem była zamiana współrzędnych złączowych na współrzędne kartezjańskie. W tym celu rozwiązano proste zadanie kinematyki. 
 Ponieżej przedstawiono schemat łańcucha kinematycznego, razem z wyznaczonymi układami współrzędnych złączowych według notacji Denavita-Hartenberga. Jako początek głównego układu współrzędnych przyjęto miejsce przecięcia się osi środkowej z podłożej, w pozycji bazowej robota.
@@ -285,6 +293,17 @@ t_{31}		& t_{32}	& t_{33}	& t_{34}	\\
 \vspace{5 mm}
 
 $t_{11} = \cos \Theta_2 \cos \Theta_6 - \sin \Theta_6 (\cos \Theta_5 (\cos \Theta_3 \cos \Theta_4 \sin \Theta_2 - \sin \Theta_2 \sin \Theta_3 \sin \Theta_4) - \sin \Theta_5 (\cos \Theta_3 \sin \Theta_2 \sin \Theta_4 + \cos \Theta_4 \sin \Theta_2 \sin \Theta_3))$
+$t_{12} = $
+$t_{13} = $
+$t_{14} = $
+$t_{21} = $
+$t_{22} = $
+$t_{23} = $
+$t_{24} = $
+$t_{31} = $
+$t_{32} = $
+$t_{33} = $
+$t_{34} = $
 
 Na podstawie wyliczononej macierzy przeszktałceń można było zapisać funkcje wyznaczające współrzędne końcówki roboczej w układzie kartezjańskim:
 
@@ -297,3 +316,7 @@ z = hh \\$
 \section{Odwrotne zadanie kinematyki}
 \label{sec:odwrotneZadanieKinematyki}
 
+Uwzglęniając złączę pryzmatyczne, na której została zainstalowana podstawa robota, układ wykonawczy miał 6 stopni swobody. Dwa ostatnie złacza służyły do ustawienia orientacji chwytaka tak, aby był on zawsze skierowany pionowo w dół. W tym przypadku łańcuch kinematyczny ustawiający położenie końcówki robota miał 4 stopnie swobody, oznacza że był redundatny (posiadał więcej stopni swobody niż ilości zmienych koniecznych do opisania położenia). Z tego wynikało, że rozwiązanie odwrotnego zadania kinematyki nie jest jednoznaczne. Robot mógł dojść do zadanej pozycji na więcej niż jeden sposób. Z tego powodu opracowano algorytm obliczania zmiennych złączowych ze współrzędnych kartezjańskich docelowej pozycji końcówki roboczej.
+%Schemat algorytmu
+
+W powyższym algorytmie zminimalizowano użycie napędu liniowego, ponieważ w porównaniu do innych złączy jest wolny (2 m/s).
