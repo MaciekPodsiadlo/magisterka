@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.103"
+    ComputedModelVersion    "1.104"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -37,9 +37,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Maciek"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Jun 02 17:06:42 2014"
+  LastModifiedDate	  "Mon Jun 02 18:00:20 2014"
   RTWModifiedTimeStamp	  323614620
-  ModelVersionFormat	  "1.%<AutoIncrement:103>"
+  ModelVersionFormat	  "1.%<AutoIncrement:104>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1424,7 +1424,7 @@ Model {
       Name		      "Scope16"
       SID		      "771"
       Ports		      [1]
-      Position		      [850, 594, 880, 626]
+      Position		      [860, 594, 890, 626]
       Floating		      off
       Location		      [188, 392, 512, 629]
       Open		      off
