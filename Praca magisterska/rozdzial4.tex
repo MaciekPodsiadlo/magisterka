@@ -10,6 +10,13 @@
 \section{Korekcja Cienia}
 \label{sec:korekcjaCienia}
 
+Tak zwana korekcja cienia była operacją arytmeczną na obrazie. Miała ona za zadanie usunięcie regularnych odchyleń od jasności. Mogły być one wynikiem między innymi przez: efekt cienia, nieprostopadłe oświetlenie czy zaciemnianie brzegów spwodowane mniejszą przepuszczalnością światła na krańcach soczewki. W wykonanych eksperymentach nie zaobserwowano ostatniego przypadku. Korekcję osiągnięto przez zastosowanie różnicy między badanym obrazem, a obrazem tła w tych samych warunkach oświetleniowych. Wartość każdego piksela została obliczona na podstawie wzoru:
+$b(x,y) = (255 + ( g(x,y) - g_r(x, y) ) ) / 2$
+Gdzie: 
+b(x,y) - jasność piksela w obrazie wynikowym;
+g(x,y) - jasność piksela w obrazie badanym;
+$g_r$(x,y) - jasność piksela w obrazie tła;
+
 \section{Filtracja}
 \label{sec:filtracja}
 
