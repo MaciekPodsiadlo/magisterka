@@ -4,7 +4,7 @@
 % foreground = rgb2gray(frame8);
 % background = rgb2gray(frame7);
 
-hsvImage_foreground = rgb2hsv(frame8);
+hsvImage_foreground = rgb2hsv(calibration1);
 foreground = uint8(255.*hsvImage_foreground(:,:,3));
 
 hsvImage_background = rgb2hsv(frame7);
@@ -29,7 +29,7 @@ hist_substractImage = imhist(substractImage);
 
 %% Fitry wygladzajace
 
-medianImage = medfilt2(substractImage, [5 5]);
+medianImage = medfilt2(substractImage);
 hist_medianImage = imhist(medianImage);
 
 ave_fil = fspecial('average');
@@ -49,30 +49,35 @@ hist_wienerImage = imhist(wienerImage);
 
 %% Filtry wyostrzajace
 
-lap_fil = fspecial('laplacian', 0.6);
-laplacianImage = imfilter(wienerImage, lap_fil);
+lap_fil = fspecial('laplacian', 0.3);
+laplacianImage = imfilter(gaussianImage, lap_fil);
 
 log_fil = fspecial('log');
-logImage = imfilter(wienerImage, log_fil);
+logImage = imfilter(gaussianImage, log_fil);
 
 prew_fil = fspecial('prewitt');
-prewittImage = imfilter(wienerImage, prew_fil);
+prewittImage = imfilter(gaussianImage, prew_fil);
 
 sob_fil = fspecial('sobel');
-sobelImage = imfilter(wienerImage, sob_fil);
+sobelImage = imfilter(gaussianImage, sob_fil);
 
 %% Binearyzacja
 
 % przygotowanie do progowania
 histogram_laplacianImage = imhist(laplacianImage);
-percentile = prctile(histogram_laplacianImage, 60); %hist_Image histogram obrazu do binearyzacji
-maskImage = im2bw(laplacianImage, percentile/100);
+percentile = prctile(histogram_laplacianImage, 80); %hist_Image histogram obrazu do binearyzacji
+maskImage = im2bw(laplacianImage, percentile/255);
 toTresholdImage = uint8(maskImage).*substractImage;
 hist_toTresholdImage = imhist(toTresholdImage);
 hist_toTresholdImage = hist_toTresholdImage(2:end);
 
 % metoda Otsu
 
-k = Otsu_method1(hist_toTresholdImage);
+k1 = Otsu_method1(hist_toTresholdImage);
+
+lastImage = im2bw(gaussianImage, k1/255);
 
 %% Operacje morfologiczne
+
+SE = strel('disk', 3);
+lastImage2 = imopen(lastImage, SE);

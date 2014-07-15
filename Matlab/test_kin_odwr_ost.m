@@ -3,8 +3,8 @@ clc;
 
 table = zeros(361, 201, 5);
       
-    Rmin = 461;
-    Rmax = 947;
+    Rmin = 463;
+    Rmax = 945;
     y_akt = 0;
     wsp_z = 930;
     k = 1;
