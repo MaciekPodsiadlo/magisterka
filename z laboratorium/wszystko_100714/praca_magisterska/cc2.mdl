@@ -1,0 +1,864 @@
+Model {
+  Name			  "cc2"
+  Version		  7.0
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.3"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1250"
+  PostLoadFcn		  ",try, rti_mdl_postloadfcn(bdroot, 'UpdateModel', 280, 'rti1005'); catch, disp(lasterr); end, "
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Fri Jul 04 11:13:03 2014"
+  Creator		  "k12_p800a"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "k12_p800a"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Jul 04 11:21:22 2014"
+  RTWModifiedTimeStamp	  0
+  ModelVersionFormat	  "1.%<AutoIncrement:3>"
+  ConfigurationManager	  "None"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  off
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.3.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.3.0"
+	  StartTime		  "0.0"
+	  StopTime		  "2"
+	  AbsTol		  "auto"
+	  FixedStep		  "0.001"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode1"
+	  SolverName		  "ode1"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.3.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.3.0"
+	  BlockReduction	  off
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  off
+	  BufferReuse		  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  off
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  off
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.3.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.3.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Zero"
+	  ProdEndianess		  "BigEndian"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "Specified"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Zero"
+	  TargetEndianess	  "BigEndian"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.3.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    2
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.3.0"
+	  SystemTargetFile	  "rti1005.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rti"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "rti1005.tmf"
+	  Description		  "dSPACE DS1005 Hardware Platform"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "rti1005_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  RTWCompilerOptimization "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.3.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.STFCustomTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		20
+		Cell			"TimeScaleFactor"
+		Cell			"CCompilerEffectiveOptimizationOpts"
+		Cell			"CCompilerOptimizationOpts"
+		Cell			"BoardName"
+		Cell			"NetworkClient"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.3.0"
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant off
+	      CompOptLevelCompliant   off
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      SystemTargetFile	      "rti1005.tlc"
+	      DialogCategory	      0
+	      Array {
+		Type			"Handle"
+		Dimension		1
+		Simulink.GRTTargetCC {
+		  $BackupClass		  "Simulink.TargetCC"
+		  $ObjectID		  11
+		  Array {
+		    Type		    "Cell"
+		    Dimension		    15
+		    Cell		    "IncludeMdlTerminateFcn"
+		    Cell		    "CombineOutputUpdateFcns"
+		    Cell		    "SuppressErrorStatus"
+		    Cell		    "ERTCustomFileBanners"
+		    Cell		    "GenerateSampleERTMain"
+		    Cell		    "GenerateTestInterfaces"
+		    Cell		    "ModelStepFunctionPrototypeControlCompliant"
+		    Cell		    "MultiInstanceERTCode"
+		    Cell		    "PurelyIntegerCode"
+		    Cell		    "SupportNonFinite"
+		    Cell		    "SupportComplex"
+		    Cell		    "SupportAbsoluteTime"
+		    Cell		    "SupportContinuousTime"
+		    Cell		    "SupportNonInlinedSFcns"
+		    Cell		    "PortableWordSizes"
+		    PropName		    "DisabledProps"
+		  }
+		  Version		  "1.3.0"
+		  TargetFcnLib		  "ansi_tfl_table_tmw.mat"
+		  TargetLibSuffix	  ""
+		  TargetPreCompLibLocation ""
+		  GenFloatMathFcnCalls	  "ANSI_C"
+		  UtilityFuncGeneration	  "Auto"
+		  GenerateFullHeader	  on
+		  GenerateSampleERTMain	  off
+		  GenerateTestInterfaces  off
+		  IsPILTarget		  off
+		  ModelReferenceCompliant off
+		  CompOptLevelCompliant	  off
+		  IncludeMdlTerminateFcn  on
+		  CombineOutputUpdateFcns off
+		  SuppressErrorStatus	  off
+		  IncludeFileDelimiter	  "Auto"
+		  ERTCustomFileBanners	  off
+		  SupportAbsoluteTime	  on
+		  LogVarNameModifier	  "rt_"
+		  MatFileLogging	  on
+		  MultiInstanceERTCode	  off
+		  SupportNonFinite	  on
+		  SupportComplex	  on
+		  PurelyIntegerCode	  off
+		  SupportContinuousTime	  on
+		  SupportNonInlinedSFcns  on
+		  EnableShiftOperators	  on
+		  ParenthesesLevel	  "Nominal"
+		  PortableWordSizes	  off
+		  ModelStepFunctionPrototypeControlCompliant off
+		  ExtMode		  off
+		  ExtModeStaticAlloc	  off
+		  ExtModeTesting	  off
+		  ExtModeStaticAllocSize  1000000
+		  ExtModeTransport	  0
+		  ExtModeMexFile	  "rti_comm_2"
+		  ExtModeIntrfLevel	  "Level1"
+		  RTWCAPISignals	  off
+		  RTWCAPIParams		  off
+		  RTWCAPIStates		  off
+		  GenerateASAP2		  off
+		}
+		PropName		"Components"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_C__dSPACE_60_matlab_rti1005_tlc_rti1005_InitialSimState"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "RUN"
+		  Value			  1
+		  String		  "PAUSE"
+		  Value			  2
+		  String		  "STOP"
+		}
+		Name			"InitialSimState"
+		Value			"RUN"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_C__dSPACE_60_matlab_rti1005_tlc_rti1005_ExecutionMode"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "real-time"
+		  Value			  1
+		  String		  "time-scaled"
+		  Value			  2
+		  String		  "as fast as possible"
+		}
+		Name			"ExecutionMode"
+		Value			"real-time"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"ExecutionModeNonUI"
+		Value			"RTSIM"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"TimeScaleFactor"
+		Value			"1.0"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"TimeScaleFactorNonUI"
+		Value			"OPTION_DISABLED"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_C__dSPACE_60_matlab_rti1005_tlc_rti1005_AssertionMode"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "OFF"
+		  Value			  1
+		  String		  "WARN"
+		  Value			  2
+		  String		  "STOP"
+		}
+		Name			"AssertionMode"
+		Value			"OFF"
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TAStimulusEngineEnable"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"EnableRealTimeTesting"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"EnableRealTimeTestingNonUI"
+		Value			"OFF"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_C__dSPACE_60_matlab_rti1005_tlc_rti1005_CCompilerOptimizationOptsPopup_"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "Default"
+		  Value			  1
+		  String		  "None"
+		  Value			  2
+		  String		  "User-defined"
+		}
+		Name			"CCompilerOptimizationOptsPopup_"
+		Value			"Default"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"CCompilerEffectiveOptimizationOpts"
+		Value			"-Ot -Oi -Or -Ox -D_INLINE"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"CCompilerOptimizationOptsNonUI"
+		Value			"USE_DEFAULT"
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"EnableDataSetStorage"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"EnableDataSetStorageNonUI"
+		Value			"OFF"
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"LoadAfterBuild"
+		Value			on
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"LoadToFlash"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"LoadApplNonUI"
+		Value			"ON"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_C__dSPACE_60_matlab_rti1005_tlc_rti1005_PlatformSelectionPopup"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "Auto"
+		  Value			  1
+		  String		  "User-defined (bus)"
+		  Value			  2
+		  String		  "User-defined (network)"
+		}
+		Name			"PlatformSelectionPopup"
+		Value			"Auto"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"BoardNameNonUI"
+		Value			"OPTION_DISABLED"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"NetworkClientNonUI"
+		Value			"OPTION_DISABLED"
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCMaskParameters"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateLabels"
+		Value			on
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateVirtualBlocks"
+		Value			on
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateStates"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateDerivatives"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCApplySubsystemPermissions"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"TRCGenerateParamValues"
+		Value			off
+	      }
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Lookup
+      InputValues	      "[-4:5]"
+      Table		      " rand(1,10)-0.5"
+      LookUpMeth	      "Interpolation-Extrapolation"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      LUTDesignTableMode      "Redesign Table"
+      LUTDesignDataSource     "Block Dialog"
+      LUTDesignFunctionName   "sqrt(x)"
+      LUTDesignUseExistingBP  on
+      LUTDesignRelError	      "0.01"
+      LUTDesignAbsError	      "1e-6"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "cc2"
+    Location		    [447, 257, 983, 558]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      Position		      [165, 130, 195, 160]
+      Value		      "1300"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Lookup
+      Name		      "Lookup Table"
+      Position		      [235, 120, 285, 170]
+      InputValues	      "[614:1434]"
+      Table		      "[802\n801,299141657945\n800,090572276626\n798,878507830736\n797,662963088898\n796,443952862142\n795,221492003723\n793,995595408939\n792,150341197528\n790,915920703052\n789,678116934240\n788,436944973339\n787,192419943640\n785,944557009285\n784,693371375092\n783,438878286363\n782,181093028700\n780,920030927819\n779,022327318682\n777,753140421328\n776,480730633962\n775,205113460496\n773,926304443921\n772,002140309191\n770,715419940198\n769,425562433595\n768,132583505890\n766,836498911622\n764,886583451551\n763,582803864852\n762,275974049220\n760,310044988875\n758,995659346208\n757,678279367517\n755,696630142804\n754,371834630264\n753,044101121544\n751,047027514772\n749,712019872236\n747,704111217975\n746,361931107624\n744,343340315892\n742,994089949938\n740,964970744239\n739,608752873321\n737,569259778939\n736,206177684299\n734,156466016529\n732,786623502145\n730,726849354466\n728,661112962988\n727,280670971339\n725,205123438450\n723,123765042666\n721,036652845481\n719,642076407657\n717,545501772511\n715,443326266869\n713,335607522933\n711,222403324877\n709,103771607263\n706,979770453448\n705,560815413952\n703,427994673030\n700,576133406896\n698,431238262014\n696,281266273825\n694,126276384897\n691,966327675367\n689,801479361318\n686,907495935659\n684,731446247339\n682,550695302430\n679,635817662938\n677,444329841644\n674,515354185100\n672,313456590381\n669,370820097680\n666,420574485588\n664,202983277330\n661,239767922078\n658,269339743445\n655,291843515911\n652,307424358442\n649,316227727415\n645,567923244252\n642,562010822086\n638,795774607369\n635,775888057974\n631,992649374133\n628,200367960821\n624,399332614950\n620,589832800077\n616,007668439510\n611,414235518159\n606,810037757707\n602,195580060322\n597,571368453291\n591,391456839834\n585,971496386228\n579,764011898040\n571,986563388738\n564,191223085273\n554,034437978716\n540,721619680401\n513,249776889715\n513,215253951597\n513,179167670810\n513,141518157281\n513,102305525696\n513,061529895504\n513,019191390915\n512,929826279185\n512,882799944267\n512,834211279393\n512,784060432574\n512,732347556577\n512,679072808929\n512,624236351915\n512,567838352574\n512,509878982707\n512,389276842362\n512,326634439259\n512,262431400378\n512,196667921293\n512,129344202329\n512,060460448567\n511,990016869838\n511,918013680726\n511,769329353441\n511,692648668186\n511,614409278382\n511,534611422362\n511,453255343202\n511,370341288728\n511,285869511510\n511,199840268864\n511,112253822850\n510,932410392675\n510,840153956347\n510,746341412319\n510,650973046358\n510,554049148975\n510,455570015415\n510,355535945663\n510,253947244440\n510,046107190145\n509,939856470189\n509,832052384994\n509,722695262950\n509,611785437178\n509,499323245529\n509,385309030581\n509,269743139641\n509,033957742650\n508,913738954841\n508,791969927524\n508,668651031631\n508,543782642810\n508,417365141434\n508,289398912591\n508,159884346090\n507,896211782920\n507,762054589445\n507,626350664692\n507,489100422041\n507,350304279579\n507,209962660103\n507,068075991118\n506,924644704835\n506,633150032748\n506,485087534886\n506,335482195610\n506,184334470645\n506,031644820412\n505,877413710031\n505,721641609316\n505,405476339613\n505,245084133719\n505,083152863676\n504,919683022757\n504,754675108917\n504,588129624800\n504,420047077732\n504,250427979722\n503,906582202311\n503,732356570324\n503,556596482220\n503,379302473393\n503,200475083912\n503,020114858517\n502,838222346617\n502,469842684268\n502,283356655968\n502,095340585455\n501,905795045460\n501,714720613370\n501,522117871231\n501,327987405745\n500,935145674803\n500,736435606011\n500,536200207196\n500,334440088311\n500,131155863950\n499,926348153354\n499,720017580401\n499,302790366140\n499,091894995778\n498,879479304949\n498,665543940708\n498,450089554739\n498,233116803354\n497,794618852705\n497,573094989181\n497,350055431719\n497,125500859735\n496,899431957262\n496,671849412945\n496,442753920039\n495,980026884527\n495,746396751467\n495,511256488909\n495,274606813129\n495,036448445004\n494,796782110006\n494,312928464241\n494,068742627377\n493,823051771439\n493,575856644844\n493,327158000591\n493,076956596261\n492,825253194009\n492,317343467242\n492,061138689908\n491,803435009010\n491,544233209559\n491,283534081127\n491,021338417850\n490,492460686090\n490,225780228660\n489,957606458486\n489,687940192472\n489,416782252068\n488,869994656610\n488,594366667164\n488,317250334544\n488,038646502893\n487,758556020887\n487,476979741729\n486,909373227406\n486,623344721268\n486,335833876029\n486,046841567498\n485,756368675995\n485,464416086351\n484,876075374496\n484,579689044474\n484,281826600681\n483,982488950458\n483,681677005639\n483,075633902003\n482,770404589299\n482,463704674218\n482,155535091021\n481,845896778447\n481,534790679707\n480,908178918932\n480,592675165665\n480,275707443763\n479,957276718763\n479,637383960663\n478,993216247405\n478,668943254493\n478,343212152967\n478,016023935061\n477,687379597446\n477,025726571953\n476,692719899585\n476,358261138521\n476,022351307583\n475,684991430008\n475,005925649990\n474,664221816100\n474,321072072672\n473,976477464999\n473,630439042777\n472,934034975451\n472,583671451714\n472,231868356157\n471,878626760432\n471,167832376999\n470,810281754494\n470,451296962220\n470,090879093708\n469,729029246852\n469,001038031501\n468,634898880592\n468,267332186509\n467,898339068923\n467,156078063651\n466,782812437022\n466,408124908994\n466,032016620931\n465,654488718524\n464,895178675061\n464,513398846994\n464,130204030557\n463,745595393027\n462,972141345329\n462,583298291236\n462,193046128193\n461,801386044976\n461,013846894564\n460,617970226348\n460,220690435914\n459,822008733442\n459,020444454470\n458,617564319673\n458,213287156240\n457,807614195669\n456,992085830361\n456,582232909865\n456,170989160705\n455,758355835601\n454,928925489599\n454,512130995291\n454,093951978208\n453,674389712196\n452,831120549833\n452,407416222226\n451,982333783171\n451,555874527542\n450,698830767029\n450,268248872849\n449,836295383496\n448,968278886662\n448,532218523312\n448,094791853037\n447,656000208315\n446,774327346228\n446,331448814590\n445,887210679955\n444,994661018733\n444,546352211008\n444,096689237999\n443,645673469457\n442,739589045381\n442,284523149937\n441,828109979132\n440,911247376796\n440,450800738186\n439,989012410053\n439,525883799083\n438,595611375792\n438,128470397242\n437,659994803388\n436,719045482065\n436,246574620890\n435,772774876992\n434,821194518179\n434,343416801943\n433,864316000333\n432,902150982715\n432,419089697628\n431,934711189002\n430,962008407145\n430,473687096934\n429,984054489218\n429,000861351282\n428,507303816039\n428,012440973235\n427,018805398667\n426,520035693689\n426,019966734714\n425,015937151910\n424,511979586530\n424,006728884039\n422,992354227985\n422,483233364382\n421,972825543582\n420,948155253467\n420,433895905476\n419,401536636235\n418,883439859732\n418,364067091626\n417,321499912888\n416,798308678095\n416,273847803371\n415,221123528387\n414,692863334907\n413,632554881829\n413,100509852114\n412,567206446605\n411,496831010168\n410,959762239790\n410,421441614706\n409,341051363499\n408,798985028432\n407,711118195507\n407,165321011480\n406,070007421256\n405,520494351575\n404,969745996140\n403,864550142469\n403,310106010852\n402,197533782711\n401,639409075276\n401,080060904547\n399,957700992414\n399,394692669914\n398,265027867143\n397,698374828028\n396,561436104950\n395,991153884300\n394,846972410665\n394,273076643055\n393,697979851277\n392,544190206248\n391,965500867640\n390,804541972174\n390,222275951798\n389,054179634169\n388,468352895141\n387,293151179300\n386,703779782355\n385,521504887051\n384,928604990105\n383,739289328001\n383,142877185704\n381,946553362490\n381,346645325782\n380,745575641057\n380,744555172960\n380,741493771777\n380,736391446833\n380,729248213672\n381,331338366494\n380,720064094052\n380,708839115950\n380,695573313560\n380,680266727291\n380,662919403770\n380,643531395840\n381,245621548661\n380,622102762559\n380,598633569204\n380,573123887265\n380,545573794450\n380,515983374681\n380,484352718095\n381,086442870916\n380,450681921045\n380,414971086098\n380,377220322035\n380,337429743852\n380,295599472757\n380,251729636174\n380,853819788995\n380,205820367736\n380,157871807292\n380,107884100902\n380,055857400836\n380,001791865577\n379,945687659818\n380,547777812640\n379,887544954462\n379,827363926622\n379,765144759619\n379,700887642985\n379,634592772456\n379,566260349980\n380,168350502802\n379,495890583708\n379,423483687999\n379,349039883417\n379,272559396731\n379,194042460913\n379,113489315140\n379,715579467961\n379,030900204790\n378,946275381444\n378,859615102885\n378,770919633094\n378,680189242253\n378,587424206743\n379,189514359565\n378,492624809142\n378,395791338225\n378,296924088965\n378,196023362527\n378,093089466273\n377,988122713758\n378,590212866579\n377,881123424727\n377,772091925121\n377,661028547067\n377,547933628884\n377,432807515079\n377,315650556345\n377,917740709167\n377,196463109564\n377,075245537800\n376,951998210304\n376,826721502509\n376,699415796028\n376,570081478657\n377,172171631479\n376,438718944371\n376,305328593323\n376,169910831843\n376,032466072437\n375,892994733786\n375,751497240743\n376,353587393565\n375,607974024335\n375,462425521757\n375,314852176377\n375,165254437728\n375,013632761510\n374,859987609590\n374,704319449998\n375,306409602819\n374,546628756925\n374,386916010724\n374,225181697910\n374,061426311151\n373,895650349276\n373,727854317267\n374,329944470089\n373,558038726260\n373,386204093542\n373,212350942551\n373,036479802875\n372,858591210248\n372,678685706548\n373,280775859370\n372,496763839800\n372,312826164168\n372,126873239959\n371,938905633618\n371,748923917727\n371,556928671002\n371,362920478296\n371,965010631117\n371,166899930589\n370,968867624996\n370,768824164756\n370,566770159237\n370,362706223930\n370,156632980449\n370,758723133271\n369,948551056530\n369,738461086026\n369,526363708907\n369,312259571259\n369,096149325280\n368,878033629279\n368,657913147675\n369,260003300496\n368,435788550992\n368,211660515862\n367,985529725016\n367,757396867288\n367,527262637611\n367,295127737013\n367,060992872618\n367,663083025440\n366,824858757640\n366,586726111386\n366,346595659249\n366,104468132707\n365,860344269323\n365,614224812742\n365,366110512684\n365,968200665506\n365,116002124950\n364,863900411413\n364,609806140018\n364,353720084781\n364,095643025785\n363,835575749176\n363,573519047165\n364,175609199987\n363,309473718022\n363,043440566075\n362,775420401706\n362,505414041353\n362,233422307501\n361,959446028683\n361,683486039480\n362,285576192302\n361,405543180513\n361,125618298445\n360,843712245975\n360,559825881838\n360,273960070800\n359,986115683660\n359,696293597240\n359,404494694390\n360,006584847211\n359,110719863978\n358,814970000895\n358,517246006045\n358,217548786348\n357,915879254733\n357,612238330138\n357,306626937506\n357,908717090328\n356,999046007782\n356,689496477911\n356,377979290835\n356,064495395488\n355,749045746798\n355,431631305679\n355,112253039029\n354,790911919731\n355,393002072553\n354,467608926645\n354,142345044609\n353,815121264433\n353,485938582896\n353,154798002747\n352,821700532697\n352,486647187418\n352,149638987542\n351,810676959654\n352,412767112476\n351,469762136291\n351,126895555938\n350,782078263028\n350,435311307932\n350,086595746963\n349,735932642369\n349,383323062332\n349,028768080960\n349,630858233782\n348,672268778290\n348,313826240281\n347,953441558810\n347,591115831672\n347,226850162575\n346,860645661133\n346,492503442870\n346,122424629211\n345,750410347480\n346,352500500301\n345,376461730897\n345,000579918574\n344,622766055513\n344,243021292600\n343,861346786603\n343,477743700170\n343,092213201821\n342,704756465950\n342,315374672817\n341,924069008546\n342,526159161368\n341,530840665123\n341,135690840388\n340,738620738038\n340,339631567616\n339,938724544512\n339,535900889960\n339,131161831029\n338,724508600625\n338,315942437484\n337,905464586169\n338,507554738991\n337,493076297068\n337,078778826387\n336,662573436147\n336,244461394182\n335,824443974135\n335,402522455450\n334,978698123375\n334,552972268951\n334,125346189014\n333,695821186186\n333,264398568875\n333,866488721697\n332,831079651269\n332,395865753334\n331,958758200805\n331,519758325188\n331,078867463754\n330,636086959531\n330,191418161307\n329,744862423619\n329,296421106755\n328,846095576742\n328,393887205353\n327,939797370091\n328,541887522912\n327,483827454192\n327,025978846622\n326,566252942064\n326,104651140926\n325,641174849325\n325,175825479090\n324,708604447758\n324,239513178563\n323,768553100440\n323,295725648014\n322,821032261600\n322,344474387196\n321,866053476480\n321,385770986806\n321,987861139627\n320,903628381196\n320,419627128341\n319,933768702593\n319,446054583961\n318,956486258106\n318,465065216339\n317,971792955613\n319,176852546326\n320,385421927645\n321,597486373535\n322,813031115373\n324,032041342129\n325,254502200548\n326,480398795332\n327,709716189316\n328,942439403656\n330,178553418009\n331,418043170716\n332,660893558985\n333,907089439076\n335,156615626487\n336,409456896134\n338,294901175571\n339,555963276452\n340,820286854907\n342,087856505552\n343,358656783450\n344,632672204303\n345,909887244633\n347,831675038149\n349,116820956585\n350,405111856561\n351,696532040660\n353,639495292648\n354,938669761097\n356,240918273695\n357,546224962956\n359,509884276308\n360,822766742908\n362,138651557793\n364,118073099611\n365,441393558485\n366,767660089134\n368,762548409613\n370,096109341051\n372,101863192379\n373,442616968776\n375,459083605031\n376,806928122798\n378,833953982239\n380,188786597797\n382,226217314555\n383,587934852156\n385,635615267995\n387,004114027575\n389,061888203704\n391,125643465120\n392,504775197732\n394,578373123481\n396,657800897298\n398,047296738477\n400,136314161822\n402,231009059473\n404,331324004312\n405,734627787109\n407,844181443675\n409,959201259471\n412,079629250161\n414,205407283140\n416,336477079130\n418,472780213776\n420,614258119248\n422,760852085848\n424,912503263617\n427,069152663953\n429,952357998627\n432,120439751463\n434,293322117644\n437,197863246245\n439,381715155442\n441,570168606450\n444,495160777614\n446,694117620724\n449,632895747795\n452,579354751028\n454,794153204174\n457,753707966889\n460,720547808835\n463,694528130424\n466,675503984051\n469,663330081158\n472,657860799317\n476,410230195342\n479,419312197790\n482,434623328486\n486,212298037686\n489,999188425364\n493,795006105154\n497,599462010845\n501,412266418390\n505,998242859816\n510,595320089377\n515,202993985750\n519,820759265568\n525,220230843089\n530,631942689841\n536,830708046452\n543,043197147075\n550,047143443948\n558,626507246845\n568,788601902740\n583,675037005231\n607]"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [1]
+      Position		      [365, 119, 395, 151]
+      Floating		      off
+      Location		      [188, 390, 512, 629]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      DstBlock		      "Lookup Table"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Lookup Table"
+      SrcPort		      1
+      Points		      [0, -10]
+      DstBlock		      "Scope"
+      DstPort		      1
+    }
+  }
+}

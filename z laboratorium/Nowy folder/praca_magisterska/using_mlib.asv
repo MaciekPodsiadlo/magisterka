@@ -1,0 +1,16 @@
+function [] = using_mlib()
+mlibini;
+mlib('SelectBoard','DS1005');
+% mlib('LoadVarFile' , 'C:\Documents and Settings\k12_p800a\Moje dokumenty\praca_magisterska');
+par_names = {
+    'Model Root/Constant/Value';
+    'Model Root/wlacz/Value';
+    };
+[param trig] = mlib('GetTrcVar' , par_names);
+% zmienna = mlib('Read', param)
+[kk] = 12;
+
+
+mlib('Write',param,'Data',{kk});
+
+end

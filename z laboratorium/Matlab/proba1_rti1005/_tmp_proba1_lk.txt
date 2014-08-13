@@ -1,0 +1,1 @@
+C:\PPCTools33\BIN\lnkppc.exe  -QmsA0314 -m ..\proba1.map -o ..\proba1.ppc -c _tmp_proba1.lk 

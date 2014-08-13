@@ -1,0 +1,51 @@
+          DefaultFormat: 'RGB24_720x480'
+    DeviceFileSupported: 0
+             DeviceName: 'WinFast TV2000 XP WDM Video Capture'
+               DeviceID: 1
+      ObjectConstructor: 'videoinput('winvideo', 1)'
+       SupportedFormats: {1x10 cell}
+
+                AdaptorName: 'winvideo'
+                 DeviceName: 'WinFast TV2000 XP WDM Video Capture'
+                  MaxHeight: 480
+                   MaxWidth: 720
+             NativeDataType: 'uint8'
+               TotalSources: 3
+    VendorDriverDescription: 'Windows WDM Compatible Driver'
+        VendorDriverVersion: 'DirectX 9.0'
+
+Formats
+
+  Columns 1 through 4
+
+    'I420_720x480'    'I420_768x576'    'RGB24_720x480'    'RGB24_768x576'
+                []                []                 []                 []
+                []                []                 []                 []
+                []                []                 []                 []
+                []                []                 []                 []
+                []                []                 []                 []
+
+  Columns 5 through 8
+
+    'RGB555_720x480'    'RGB555_768x576'    'YUY2_720x480'    'YUY2_768x576'
+                  []                  []                []                []
+                  []                  []                []                []
+                  []                  []                []                []
+                  []                  []                []                []
+                  []                  []                []                []
+
+  Columns 9 through 10
+
+    'YVU9_720x480'    'YVU9_768x576'
+                []                []
+                []                []
+                []                []
+                []                []
+                []                []
+
+
+
+
+
+
+
