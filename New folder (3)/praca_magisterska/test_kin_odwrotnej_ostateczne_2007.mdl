@@ -1,0 +1,3709 @@
+Model {
+  Name			  "test_kin_odwrotnej_ostateczne_2007"
+  Version		  6.6
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.109"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1250"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  Created		  "Tue May 06 11:07:58 2014"
+  Creator		  "Maciek"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Maciek"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Jun 11 10:07:49 2014"
+  ModelVersionFormat	  "1.%<AutoIncrement:109>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      3
+      Version		      "1.2.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  4
+	  Version		  "1.2.0"
+	  StartTime		  "0.0"
+	  StopTime		  "0"
+	  AbsTol		  "auto"
+	  FixedStep		  "1"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  5
+	  Version		  "1.2.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  6
+	  Version		  "1.2.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    9
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    Cell		    "InitFltsAndDblsToZero"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  ExpressionFolding	  on
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  AccelVerboseBuild	  off
+  EnforceIntegerDowncast   on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  7
+	  Version		  "1.2.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+  ModelReferenceSimTargetVerbose   off
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  8
+	  Version		  "1.2.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "32-bit Generic"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  9
+	  Version		  "1.2.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  11
+	  Version		  "1.2.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateSLWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      12
+	      Version		      "1.2.0"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      13
+	      Version		      "1.2.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		Cell			"SupportNonFinite"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  14
+	  Version		  "1.2.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    3
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    Orientation		    "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Abs
+      ZeroCross		      on
+      SampleTime	      "-1"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+  OutDataTypeMode   "Inherit from 'Constant value'"
+  OutDataType   "fixdt(1,16,0)"
+  ConRadixGroup   "Use specified scaling"
+  OutScaling   "[]"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Fcn
+      Expr		      "sin(u[1])"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+  ParameterDataTypeMode   "Same as input"
+  ParameterDataType   "fixdt(1,16,0)"
+  ParameterScalingMode   "Best Precision: Matrix-wise"
+  ParameterScaling   "[]"
+  OutDataTypeMode   "Same as input"
+  OutDataType   "fixdt(1,16,0)"
+  OutScaling   "[]"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+  DataType   "auto"
+  OutDataType   "fixdt(1,16,0)"
+  OutScaling   "[]"
+  UseBusObject   off
+  BusObject   "BusObject"
+    }
+    Block {
+      BlockType		      Logic
+      Operator		      "AND"
+      Inputs		      "2"
+      IconShape		      "rectangular"
+      AllPortsSameDT	      on
+      SampleTime	      "-1"
+  OutDataTypeMode   "Logical (see Configuration Parameters: Optimization)"
+  LogicDataType   "uint(8)"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+  DataType   "auto"
+  OutDataType   "fixdt(1,16,0)"
+  OutScaling   "[]"
+  UseBusObject   off
+  BusObject   "BusObject"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+  OutDataTypeMode   "Same as first input"
+  OutDataType   "fixdt(1,16,0)"
+  OutScaling   "[]"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+  OutDataTypeMode   "Inherit via internal rule"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      FixptAsFi		      off
+      NumInputs		      "1"
+    }
+  }
+  System {
+    Name		    "test_kin_odwrotnej_ostateczne_2007"
+    Location		    [2, 82, 1262, 971]
+    Open		    off
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Abs
+      Name		      "Abs"
+      Position		      [810, 645, 840, 675]
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Add"
+      Ports		      [2, 1]
+      Position		      [755, 642, 785, 673]
+      Inputs		      "+-"
+      InputSameDT	      off
+      SaturateOnIntegerOverflow	off
+  OutDataTypeMode   "Inherit via internal rule"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Add1"
+      Ports		      [2, 1]
+      Position		      [380, 410, 400, 430]
+      NamePlacement	      "alternate"
+      IconShape		      "round"
+      Inputs		      "-+|"
+      InputSameDT	      off
+      SaturateOnIntegerOverflow	off
+  OutDataTypeMode   "Inherit via internal rule"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Add2"
+      Ports		      [2, 1]
+      Position		      [365, 255, 385, 275]
+      NamePlacement	      "alternate"
+      IconShape		      "round"
+      Inputs		      "++|"
+      InputSameDT	      off
+      SaturateOnIntegerOverflow	off
+  OutDataTypeMode   "Inherit via internal rule"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Compare\nTo Constant"
+      Ports		      [1, 1]
+      Position		      [755, 200, 785, 230]
+      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+      SourceType	      "Compare To Constant"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      relop		      "<="
+      const		      "1120^2"
+      LogicOutDataTypeMode    "boolean"
+      ZeroCross		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Compare\nTo Constant1"
+      Ports		      [1, 1]
+      Position		      [755, 260, 785, 290]
+      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+      SourceType	      "Compare To Constant"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      relop		      ">="
+      const		      "-160"
+      LogicOutDataTypeMode    "boolean"
+      ZeroCross		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Compare\nTo Constant2"
+      Ports		      [1, 1]
+      Position		      [755, 320, 785, 350]
+      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+      SourceType	      "Compare To Constant"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      relop		      "<="
+      const		      "160"
+      LogicOutDataTypeMode    "boolean"
+      ZeroCross		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Compare\nTo Constant3"
+      Ports		      [1, 1]
+      Position		      [755, 385, 785, 415]
+      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+      SourceType	      "Compare To Constant"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      relop		      ">="
+      const		      "-40"
+      LogicOutDataTypeMode    "boolean"
+      ZeroCross		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Compare\nTo Constant4"
+      Ports		      [1, 1]
+      Position		      [755, 445, 785, 475]
+      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+      SourceType	      "Compare To Constant"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      relop		      "<="
+      const		      "40"
+      LogicOutDataTypeMode    "boolean"
+      ZeroCross		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Compare\nTo Constant5"
+      Ports		      [1, 1]
+      Position		      [755, 505, 785, 535]
+      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+      SourceType	      "Compare To Constant"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      relop		      ">="
+      const		      "-25"
+      LogicOutDataTypeMode    "boolean"
+      ZeroCross		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Compare\nTo Constant6"
+      Ports		      [1, 1]
+      Position		      [755, 575, 785, 605]
+      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+      SourceType	      "Compare To Constant"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      relop		      "<="
+      const		      "40"
+      LogicOutDataTypeMode    "boolean"
+      ZeroCross		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Compare\nTo Constant7"
+      Ports		      [1, 1]
+      Position		      [870, 645, 900, 675]
+      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+      SourceType	      "Compare To Constant"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      relop		      "<="
+      const		      "40"
+      LogicOutDataTypeMode    "boolean"
+      ZeroCross		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Compare\nTo Constant8"
+      Ports		      [1, 1]
+      Position		      [755, 75, 785, 105]
+      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+      SourceType	      "Compare To Constant"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      relop		      ">="
+      const		      "-Rmax*cos(pi()/9)"
+      LogicOutDataTypeMode    "boolean"
+      ZeroCross		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Compare\nTo Constant9"
+      Ports		      [1, 1]
+      Position		      [755, 135, 785, 165]
+      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+      SourceType	      "Compare To Constant"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      relop		      "<="
+      const		      "Rmax"
+      LogicOutDataTypeMode    "boolean"
+      ZeroCross		      off
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      Position		      [70, 335, 100, 365]
+      Value		      "wsp_x"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      Position		      [70, 405, 100, 435]
+      Value		      "wsp_y"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant2"
+      Position		      [70, 475, 100, 505]
+      Value		      "wsp_z"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant3"
+      Position		      [310, 170, 340, 200]
+      Value		      "y_akt"
+  OutDataTypeMode   "double"
+    }
+    Block {
+      BlockType		      Logic
+      Name		      "Logical\nOperator"
+      Ports		      [10, 1]
+      Position		      [1010, 324, 1060, 426]
+      Inputs		      "10"
+      AllPortsSameDT	      off
+  OutDataTypeMode   "boolean"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [3, 1]
+      Position		      [435, 367, 440, 473]
+      ShowName		      off
+      Inputs		      "3"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      Ports		      [2, 1]
+      Position		      [510, 526, 515, 564]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux2"
+      Ports		      [4, 1]
+      Position		      [1130, 573, 1135, 647]
+      ShowName		      off
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Radians\nto Degrees"
+      Ports		      [1, 1]
+      Position		      [625, 295, 655, 325]
+      SourceBlock	      "simulink_extras/Transformations/Radians\nto Degrees"
+      SourceType	      "RadiansToDegrees"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Radians\nto Degrees1"
+      Ports		      [1, 1]
+      Position		      [625, 405, 655, 435]
+      SourceBlock	      "simulink_extras/Transformations/Radians\nto Degrees"
+      SourceType	      "RadiansToDegrees"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Radians\nto Degrees2"
+      Ports		      [1, 1]
+      Position		      [625, 530, 655, 560]
+      SourceBlock	      "simulink_extras/Transformations/Radians\nto Degrees"
+      SourceType	      "RadiansToDegrees"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      Ports		      [1]
+      Position		      [1165, 595, 1225, 625]
+      VariableName	      "wsp_zlaczowe"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace1"
+      Ports		      [1]
+      Position		      [1100, 360, 1160, 390]
+      VariableName	      "czy_dostepne"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "fi1"
+      Position		      [535, 295, 595, 325]
+      Expr		      "atan2(u(2),u(1))"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "fi2"
+      Position		      [535, 405, 595, 435]
+      Expr		      "3.1415/2 - atan2((u(3)-700),sqrt(u(1)^2+u(2)^2)) - acos((450^2+u(1)^2+u(2)^2+(u(3)-700)^2-670^2)/(2"
+      "*450*sqrt(u(1)^2+u(2)^2+(u(3)-700)^2)))"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "fi3"
+      Position		      [535, 530, 595, 560]
+      Expr		      "asin((450*cos(u(4))-u(3)+700)/670)"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "ograniczenie"
+      Position		      [535, 200, 595, 230]
+      Expr		      "(u(3)-700)^2+u(1)^2+u(2)^2"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "optymalizacja1"
+      Ports		      [3, 1]
+      Position		      [245, 246, 345, 284]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"optymalizacja1"
+	Location		[8, 82, 1268, 995]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In"
+	  Position		  [15, 258, 45, 272]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [15, 293, 45, 307]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In2"
+	  Position		  [15, 328, 45, 342]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " "
+	  Position		  [670, 354, 695, 376]
+	  Value			  "0"
+  OutDataTypeMode   "double"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 1"
+	  Position		  [670, 164, 695, 186]
+	  Value			  "0"
+  OutDataTypeMode   "double"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [220, 315, 250, 345]
+  OutDataTypeMode   "double"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  Position		  [25, 170, 55, 200]
+	  Value			  "y_akt"
+  OutDataTypeMode   "double"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator1"
+	  Ports			  [2, 1]
+	  Position		  [605, 122, 635, 153]
+	  Operator		  "OR"
+	  AllPortsSameDT	  off
+  OutDataTypeMode   "boolean"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator2"
+	  Ports			  [2, 1]
+	  Position		  [605, 397, 635, 428]
+	  Operator		  "OR"
+	  AllPortsSameDT	  off
+  OutDataTypeMode   "boolean"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator3"
+	  Ports			  [2, 1]
+	  Position		  [785, 260, 815, 300]
+	  AllPortsSameDT	  off
+  OutDataTypeMode   "boolean"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  Ports			  [2, 1]
+	  Position		  [375, 221, 380, 259]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  Ports			  [3, 1]
+	  Position		  [105, 247, 110, 353]
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1]
+	  Position		  [65, 290, 85, 310]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "-+|"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+  OutDataTypeMode   "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch1"
+	  Position		  [305, 294, 335, 336]
+	  Criteria		  "u2 ~= 0"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+  OutDataTypeMode   "double"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch2"
+	  Position		  [960, 265, 990, 295]
+	  Criteria		  "u2 ~= 0"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch3"
+	  Position		  [745, 125, 775, 155]
+	  Criteria		  "u2 ~= 0"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch4"
+	  Position		  [750, 400, 780, 430]
+	  Criteria		  "u2 ~= 0"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch5"
+	  Position		  [890, 195, 920, 225]
+	  Criteria		  "u2 ~= 0"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch6"
+	  Position		  [865, 505, 895, 535]
+	  Criteria		  "u2 ~= 0"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "do Fimax"
+	  Ports			  [1, 1]
+	  Position		  [520, 115, 550, 145]
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  relop			  ">="
+	  const			  "2.792527"
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "do Fimin"
+	  Ports			  [1, 1]
+	  Position		  [520, 225, 550, 255]
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  relop			  "<="
+	  const			  "-2.792527"
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "do Rmax"
+	  Ports			  [1, 1]
+	  Position		  [520, 300, 550, 330]
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  relop			  ">="
+	  const			  "Rmax"
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "do Rmin"
+	  Ports			  [1, 1]
+	  Position		  [520, 405, 550, 435]
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  relop			  "<="
+	  const			  "Rmin"
+	  LogicOutDataTypeMode	  "uint8"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "fi"
+	  Position		  [405, 225, 465, 255]
+	  Expr			  "acos(u(1)/u(4))*sgn(u(2))"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "not"
+	  Ports			  [1, 1]
+	  Position		  [670, 398, 695, 432]
+	  Operator		  "NOT"
+	  AllPortsSameDT	  off
+  OutDataTypeMode   "boolean"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "not1"
+	  Ports			  [1, 1]
+	  Position		  [825, 263, 850, 297]
+	  Operator		  "NOT"
+	  AllPortsSameDT	  off
+  OutDataTypeMode   "boolean"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "r"
+	  Position		  [145, 285, 205, 315]
+	  Expr			  "sqrt(u(1)^2+u(2)^2)"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "warunek na Fi"
+	  Ports			  [2, 1]
+	  Position		  [595, 24, 695, 66]
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "warunek na Fi"
+	    Location		    [10, 82, 1270, 955]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      Position		      [75, 38, 105, 52]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "warunek"
+	      Position		      [15, 133, 45, 147]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "FImax"
+	      Position		      [60, 75, 90, 105]
+	      Value		      "8*pi()/9"
+	      SamplingMode	      "Frame based"
+  OutDataTypeMode   "double"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "FImin1"
+	      Position		      [60, 175, 90, 205]
+	      Value		      "-8*pi()/9"
+	      SamplingMode	      "Frame based"
+  OutDataTypeMode   "double"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux1"
+	      Ports		      [2, 1]
+	      Position		      [240, 73, 245, 137]
+	      ShowName		      off
+	      Inputs		      "2"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux3"
+	      Ports		      [2, 1]
+	      Position		      [540, 60, 545, 120]
+	      ShowName		      off
+	      Inputs		      "2"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem1"
+	      Ports		      [1, 1]
+	      Position		      [750, 185, 790, 245]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"Subsystem1"
+		Location		[2, 82, 1262, 971]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [140, 338, 170, 352]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Add"
+		  Ports			  [2, 1]
+		  Position		  [365, 230, 385, 250]
+		  IconShape		  "round"
+		  Inputs		  "++|"
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
+  OutDataTypeMode   "Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [285, 290, 315, 320]
+		  Value			  "0"
+		}
+		Block {
+		  BlockType		  Logic
+		  Name			  "Logical\nOperator4"
+		  Ports			  [2, 1]
+		  Position		  [635, 182, 665, 213]
+		  NamePlacement		  "alternate"
+		  AllPortsSameDT	  off
+  OutDataTypeMode   "boolean"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "do Xmax"
+		  Ports			  [1, 1]
+		  Position		  [495, 225, 525, 255]
+		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  relop			  "<"
+		  const			  "1600"
+		  LogicOutDataTypeMode	  "uint8"
+		  ZeroCross		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "do Xmin"
+		  Ports			  [1, 1]
+		  Position		  [495, 175, 525, 205]
+		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  relop			  ">"
+		  const			  "0"
+		  LogicOutDataTypeMode	  "uint8"
+		  ZeroCross		  off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [750, 330, 765, 360]
+		  NamePlacement		  "alternate"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  Points		  [30, 0; 0, -25; 65, 0; 0, -105]
+		  DstBlock		  "Add"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator4"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 120; 50, 0; 0, 25]
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Add"
+		  SrcPort		  1
+		  Points		  [45, 0]
+		  Branch {
+		    DstBlock		    "do Xmax"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -50]
+		    DstBlock		    "do Xmin"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  Points		  [0, -65]
+		  DstBlock		  "Add"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "do Xmax"
+		  SrcPort		  1
+		  Points		  [90, 0]
+		  DstBlock		  "Logical\nOperator4"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "do Xmin"
+		  SrcPort		  1
+		  DstBlock		  "Logical\nOperator4"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem4"
+	      Ports		      [1, 1]
+	      Position		      [750, 60, 790, 120]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"Subsystem4"
+		Location		[2, 82, 1262, 971]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [140, 338, 170, 352]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Add"
+		  Ports			  [2, 1]
+		  Position		  [365, 230, 385, 250]
+		  IconShape		  "round"
+		  Inputs		  "++|"
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
+  OutDataTypeMode   "Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [280, 290, 310, 320]
+		  Value			  "0"
+		}
+		Block {
+		  BlockType		  Logic
+		  Name			  "Logical\nOperator4"
+		  Ports			  [2, 1]
+		  Position		  [635, 182, 665, 213]
+		  NamePlacement		  "alternate"
+		  AllPortsSameDT	  off
+  OutDataTypeMode   "boolean"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "do Xmax"
+		  Ports			  [1, 1]
+		  Position		  [495, 225, 525, 255]
+		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  relop			  "<"
+		  const			  "1600"
+		  LogicOutDataTypeMode	  "uint8"
+		  ZeroCross		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "do Xmin"
+		  Ports			  [1, 1]
+		  Position		  [495, 175, 525, 205]
+		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  relop			  ">"
+		  const			  "0"
+		  LogicOutDataTypeMode	  "uint8"
+		  ZeroCross		  off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [750, 330, 765, 360]
+		  NamePlacement		  "alternate"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "do Xmin"
+		  SrcPort		  1
+		  DstBlock		  "Logical\nOperator4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "do Xmax"
+		  SrcPort		  1
+		  Points		  [90, 0]
+		  DstBlock		  "Logical\nOperator4"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  Points		  [0, -65]
+		  DstBlock		  "Add"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Add"
+		  SrcPort		  1
+		  Points		  [45, 0]
+		  Branch {
+		    Points		    [0, -50]
+		    DstBlock		    "do Xmin"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "do Xmax"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator4"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 120; 50, 0; 0, 25]
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  Points		  [30, 0; 0, -25; 65, 0; 0, -105]
+		  DstBlock		  "Add"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch1"
+	      Position		      [140, 125, 170, 155]
+	      Criteria		      "u2 ~= 0"
+	      InputSameDT	      off
+	      SaturateOnIntegerOverflow	off
+  OutDataTypeMode   "double"
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch4"
+	      Position		      [925, 75, 955, 105]
+	      Criteria		      "u2 ~= 0"
+	      InputSameDT	      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch5"
+	      Position		      [835, 200, 865, 230]
+	      Criteria		      "u2 ~= 0"
+	      InputSameDT	      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Xgran"
+	      Position		      [355, 89, 405, 121]
+	      Expr		      "u(1)*tan(u(4))"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Xnastawy1"
+	      Position		      [605, 74, 655, 106]
+	      Expr		      "u(2) - u(4)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Xnastawy2"
+	      Position		      [615, 199, 665, 231]
+	      Expr		      "u(2) + u(4)"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "nieosiagalna"
+	      Position		      [755, 300, 785, 330]
+	      Value		      "0"
+  OutDataTypeMode   "double"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Ynastawy"
+	      Position		      [985, 83, 1015, 97]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Xgran"
+	      SrcPort		      1
+	      DstBlock		      "Mux3"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "FImax"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, 40]
+	      DstBlock		      "Switch1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mux1"
+	      SrcPort		      1
+	      DstBlock		      "Xgran"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mux3"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		DstBlock		"Xnastawy1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 125]
+		DstBlock		"Xnastawy2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Subsystem4"
+	      SrcPort		      1
+	      DstBlock		      "Switch4"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Switch5"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, -115]
+	      DstBlock		      "Switch4"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Subsystem1"
+	      SrcPort		      1
+	      DstBlock		      "Switch5"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "nieosiagalna"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -90]
+	      DstBlock		      "Switch5"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Switch4"
+	      SrcPort		      1
+	      DstBlock		      "Ynastawy"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Xnastawy1"
+	      SrcPort		      1
+	      Points		      [60, 0]
+	      Branch {
+		DstBlock		"Subsystem4"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -65; 165, 0; 0, 55]
+		DstBlock		"Switch4"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Xnastawy2"
+	      SrcPort		      1
+	      Points		      [55, 0]
+	      Branch {
+		Points			[0, -40; 95, 0]
+		DstBlock		"Switch5"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Subsystem1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "In2"
+	      SrcPort		      1
+	      Points		      [115, 0]
+	      Branch {
+		DstBlock		"Mux1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[300, 0]
+		DstBlock		"Mux3"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Switch1"
+	      SrcPort		      1
+	      Points		      [50, 0]
+	      DstBlock		      "Mux1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "warunek"
+	      SrcPort		      1
+	      DstBlock		      "Switch1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "FImin1"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, -40]
+	      DstBlock		      "Switch1"
+	      DstPort		      3
+	    }
+	    Annotation {
+	      Position		      [177, 129]
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "warunek na R"
+	  Ports			  [2, 2]
+	  Position		  [595, 489, 695, 531]
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "warunek na R"
+	    Location		    [8, 82, 1268, 995]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "warunek"
+	      Position		      [210, 158, 240, 172]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In2"
+	      Position		      [430, 73, 460, 87]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      Position		      [720, 160, 750, 190]
+	      Orientation	      "down"
+	      NamePlacement	      "alternate"
+	      Gain		      "-1"
+	      SaturateOnIntegerOverflow	off
+  ParameterDataTypeMode   "Inherit via internal rule"
+  OutDataTypeMode   "Inherit via internal rule"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux1"
+	      Ports		      [2, 1]
+	      Position		      [520, 136, 525, 174]
+	      ShowName		      off
+	      Inputs		      "2"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux2"
+	      Ports		      [2, 1]
+	      Position		      [665, 126, 670, 164]
+	      ShowName		      off
+	      Inputs		      "2"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Rmax"
+	      Position		      [280, 200, 310, 230]
+	      Value		      "Rmax"
+  OutDataTypeMode   "double"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Rmin"
+	      Position		      [280, 115, 310, 145]
+	      Value		      "Rmin"
+  OutDataTypeMode   "double"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem1"
+	      Ports		      [1, 1]
+	      Position		      [940, 180, 980, 240]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"Subsystem1"
+		Location		[2, 82, 1262, 971]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [140, 338, 170, 352]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Add"
+		  Ports			  [2, 1]
+		  Position		  [365, 230, 385, 250]
+		  IconShape		  "round"
+		  Inputs		  "++|"
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
+  OutDataTypeMode   "Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [290, 290, 320, 320]
+		  Value			  "y_akt"
+		}
+		Block {
+		  BlockType		  Logic
+		  Name			  "Logical\nOperator4"
+		  Ports			  [2, 1]
+		  Position		  [635, 182, 665, 213]
+		  NamePlacement		  "alternate"
+		  AllPortsSameDT	  off
+  OutDataTypeMode   "boolean"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "do Xmax"
+		  Ports			  [1, 1]
+		  Position		  [495, 225, 525, 255]
+		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  relop			  "<"
+		  const			  "1600"
+		  LogicOutDataTypeMode	  "uint8"
+		  ZeroCross		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "do Xmin"
+		  Ports			  [1, 1]
+		  Position		  [495, 175, 525, 205]
+		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  relop			  ">"
+		  const			  "0"
+		  LogicOutDataTypeMode	  "uint8"
+		  ZeroCross		  off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [750, 290, 765, 320]
+		  NamePlacement		  "alternate"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  Points		  [30, 0; 0, -20; 65, 0; 0, -110]
+		  DstBlock		  "Add"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator4"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 90; 50, 0; 0, 15]
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Add"
+		  SrcPort		  1
+		  Points		  [45, 0]
+		  Branch {
+		    DstBlock		    "do Xmax"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -50]
+		    DstBlock		    "do Xmin"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  Points		  [0, -65]
+		  DstBlock		  "Add"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "do Xmax"
+		  SrcPort		  1
+		  Points		  [90, 0]
+		  DstBlock		  "Logical\nOperator4"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "do Xmin"
+		  SrcPort		  1
+		  DstBlock		  "Logical\nOperator4"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem2"
+	      Ports		      [2, 2]
+	      Position		      [810, 64, 850, 126]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"Subsystem2"
+		Location		[8, 82, 1268, 995]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  Position		  [115, 68, 145, 82]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In3"
+		  Position		  [25, 118, 55, 132]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux"
+		  Ports			  [1, 2]
+		  Position		  [125, 196, 130, 234]
+		  ShowName		  off
+		  Outputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [365, 70, 395, 100]
+		  Gain			  "-1"
+		  SaturateOnIntegerOverflow off
+  ParameterDataTypeMode   "Inherit via internal rule"
+  OutDataTypeMode   "Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Logic
+		  Name			  "Logical\nOperator1"
+		  Ports			  [2, 1]
+		  Position		  [530, 167, 560, 198]
+		  AllPortsSameDT	  off
+  OutDataTypeMode   "boolean"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [180, 66, 185, 104]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator"
+		  Position		  [200, 175, 220, 195]
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Xgran"
+		  Position		  [80, 109, 130, 141]
+		  Expr			  "u(1)*sin(u(2))"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Xgran1"
+		  Position		  [255, 69, 305, 101]
+		  Expr			  "u(4)-u(2)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "do Fimax"
+		  Ports			  [1, 1]
+		  Position		  [445, 130, 475, 160]
+		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  relop			  "<="
+		  const			  "2.792527"
+		  LogicOutDataTypeMode	  "uint8"
+		  ZeroCross		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "do Fimin"
+		  Ports			  [1, 1]
+		  Position		  [440, 210, 470, 240]
+		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  relop			  ">="
+		  const			  "-2.792527"
+		  LogicOutDataTypeMode	  "uint8"
+		  ZeroCross		  off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [595, 68, 625, 82]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out2"
+		  Position		  [585, 178, 615, 192]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "do Fimin"
+		  SrcPort		  1
+		  Points		  [25, 0; 0, -35]
+		  DstBlock		  "Logical\nOperator1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "do Fimax"
+		  SrcPort		  1
+		  Points		  [20, 0; 0, 30]
+		  DstBlock		  "Logical\nOperator1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Xgran"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -30]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "Xgran1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In2"
+		  SrcPort		  1
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In3"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  Branch {
+		    DstBlock		    "Xgran"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 90]
+		    DstBlock		    "Demux"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator1"
+		  SrcPort		  1
+		  DstBlock		  "Out2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  2
+		  Points		  [125, 0]
+		  Branch {
+		    DstBlock		    "do Fimin"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -80]
+		    DstBlock		    "do Fimax"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  1
+		  Points		  [25, 0; 0, -20]
+		  DstBlock		  "Terminator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Xgran1"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  Points		  [175, 0; 0, -10]
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem3"
+	      Ports		      [2, 2]
+	      Position		      [810, 179, 850, 241]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"Subsystem3"
+		Location		[10, 82, 1270, 955]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In2"
+		  Position		  [180, 63, 210, 77]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In3"
+		  Position		  [25, 113, 55, 127]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux"
+		  Ports			  [1, 2]
+		  Position		  [190, 191, 195, 229]
+		  ShowName		  off
+		  Outputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [375, 15, 405, 45]
+		  Gain			  "-1"
+		  SaturateOnIntegerOverflow off
+  ParameterDataTypeMode   "Inherit via internal rule"
+  OutDataTypeMode   "Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Logic
+		  Name			  "Logical\nOperator1"
+		  Ports			  [2, 1]
+		  Position		  [460, 162, 490, 193]
+		  AllPortsSameDT	  off
+  OutDataTypeMode   "boolean"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux3"
+		  Ports			  [2, 1]
+		  Position		  [245, 61, 250, 99]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator"
+		  Position		  [265, 170, 285, 190]
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Xgran"
+		  Position		  [95, 104, 145, 136]
+		  Expr			  "-u(1)*sin(u(2))"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Xgran1"
+		  Position		  [280, 64, 330, 96]
+		  Expr			  "u(4)-u(2)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "do Fimax"
+		  Ports			  [1, 1]
+		  Position		  [375, 125, 405, 155]
+		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  relop			  "<="
+		  const			  "2.792527"
+		  LogicOutDataTypeMode	  "uint8"
+		  ZeroCross		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "do Fimin"
+		  Ports			  [1, 1]
+		  Position		  [375, 205, 405, 235]
+		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  relop			  ">="
+		  const			  "-2.792527"
+		  LogicOutDataTypeMode	  "uint8"
+		  ZeroCross		  off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [525, 63, 555, 77]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out2"
+		  Position		  [550, 173, 580, 187]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator1"
+		  SrcPort		  1
+		  DstBlock		  "Out2"
+		  DstPort		  1
+		}
+		Line {
+		  Labels		  [1, 0]
+		  SrcBlock		  "In3"
+		  SrcPort		  1
+		  Points		  [0, 5]
+		  Branch {
+		    Points		    [0, 85]
+		    DstBlock		    "Demux"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -5]
+		    DstBlock		    "Xgran"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "In2"
+		  SrcPort		  1
+		  DstBlock		  "Mux3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux3"
+		  SrcPort		  1
+		  DstBlock		  "Xgran1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Xgran1"
+		  SrcPort		  1
+		  Points		  [20, 0; 0, -50]
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Xgran"
+		  SrcPort		  1
+		  Points		  [60, 0; 0, -30]
+		  DstBlock		  "Mux3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "do Fimax"
+		  SrcPort		  1
+		  Points		  [20, 0; 0, 30]
+		  DstBlock		  "Logical\nOperator1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "do Fimin"
+		  SrcPort		  1
+		  Points		  [20, 0; 0, -35]
+		  DstBlock		  "Logical\nOperator1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  2
+		  Points		  [125, 0]
+		  Branch {
+		    DstBlock		    "do Fimin"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -80]
+		    DstBlock		    "do Fimax"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  1
+		  Points		  [25, 0; 0, -20]
+		  DstBlock		  "Terminator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, 30; 60, 0; 0, 10]
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem4"
+	      Ports		      [1, 1]
+	      Position		      [970, 65, 1010, 125]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      System {
+		Name			"Subsystem4"
+		Location		[2, 82, 1262, 971]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [140, 338, 170, 352]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Add"
+		  Ports			  [2, 1]
+		  Position		  [365, 230, 385, 250]
+		  IconShape		  "round"
+		  Inputs		  "++|"
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
+  OutDataTypeMode   "Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [290, 290, 320, 320]
+		  Value			  "y_akt"
+		}
+		Block {
+		  BlockType		  Logic
+		  Name			  "Logical\nOperator4"
+		  Ports			  [2, 1]
+		  Position		  [635, 182, 665, 213]
+		  NamePlacement		  "alternate"
+		  AllPortsSameDT	  off
+  OutDataTypeMode   "boolean"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "do Xmax"
+		  Ports			  [1, 1]
+		  Position		  [495, 225, 525, 255]
+		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  relop			  "<"
+		  const			  "1600"
+		  LogicOutDataTypeMode	  "uint8"
+		  ZeroCross		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "do Xmin"
+		  Ports			  [1, 1]
+		  Position		  [495, 175, 525, 205]
+		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  relop			  ">"
+		  const			  "0"
+		  LogicOutDataTypeMode	  "uint8"
+		  ZeroCross		  off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [750, 290, 765, 320]
+		  NamePlacement		  "alternate"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "do Xmin"
+		  SrcPort		  1
+		  DstBlock		  "Logical\nOperator4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "do Xmax"
+		  SrcPort		  1
+		  Points		  [90, 0]
+		  DstBlock		  "Logical\nOperator4"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  Points		  [0, -65]
+		  DstBlock		  "Add"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Add"
+		  SrcPort		  1
+		  Points		  [45, 0]
+		  Branch {
+		    Points		    [0, -50]
+		    DstBlock		    "do Xmin"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "do Xmax"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator4"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 90; 50, 0; 0, 15]
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  Points		  [15, 0; 0, -20; 80, 0; 0, -110]
+		  DstBlock		  "Add"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch1"
+	      Position		      [335, 150, 365, 180]
+	      Criteria		      "u2 ~= 0"
+	      InputSameDT	      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch2"
+	      Position		      [1010, 250, 1040, 280]
+	      Criteria		      "u2 ~= 0"
+	      InputSameDT	      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch4"
+	      Position		      [1145, 80, 1175, 110]
+	      Criteria		      "u2 ~= 0"
+	      InputSameDT	      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch5"
+	      Position		      [1095, 195, 1125, 225]
+	      Criteria		      "u2 ~= 0"
+	      InputSameDT	      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch6"
+	      Position		      [1075, 125, 1105, 155]
+	      Criteria		      "u2 ~= 0"
+	      InputSameDT	      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "fi"
+	      Position		      [560, 140, 620, 170]
+	      Expr		      "acos(u(1)/u(4))*sgn(u(2))"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "nieosiagalna"
+	      Position		      [995, 300, 1025, 330]
+	      Value		      "0"
+  OutDataTypeMode   "double"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "nieosiagalna1"
+	      Position		      [905, 295, 935, 325]
+	      Value		      "0"
+  OutDataTypeMode   "double"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Xnastawy"
+	      Position		      [1210, 88, 1240, 102]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Fi test"
+	      Position		      [1195, 133, 1225, 147]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "fi"
+	      SrcPort		      1
+	      DstBlock		      "Mux2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Mux1"
+	      SrcPort		      1
+	      DstBlock		      "fi"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In2"
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      Branch {
+		Points			[275, 0]
+		Branch {
+		  Points		  [0, 115]
+		  DstBlock		  "Subsystem3"
+		  DstPort		  1
+		}
+		Branch {
+		  DstBlock		  "Subsystem2"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		Points			[0, 65]
+		DstBlock		"Mux1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Switch1"
+	      SrcPort		      1
+	      Points		      [120, 0]
+	      Branch {
+		DstBlock		"Mux1"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 55; 150, 0; 0, -85]
+		DstBlock		"Mux2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "warunek"
+	      SrcPort		      1
+	      DstBlock		      "Switch1"
+	      DstPort		      2
+	    }
+	    Line {
+	      Labels		      [1, 0]
+	      SrcBlock		      "Subsystem4"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		Points			[0, 0; 0, 45]
+		DstBlock		"Switch6"
+		DstPort			2
+	      }
+	      Branch {
+		DstBlock		"Switch4"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Switch5"
+	      SrcPort		      1
+	      DstBlock		      "Switch4"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Subsystem1"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		DstBlock		"Switch2"
+		DstPort			2
+	      }
+	      Branch {
+		DstBlock		"Switch5"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "nieosiagalna"
+	      SrcPort		      1
+	      Points		      [50, 0]
+	      DstBlock		      "Switch5"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Mux2"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -35; 40, 0]
+	      Branch {
+		DstBlock		"Subsystem2"
+		DstPort			2
+	      }
+	      Branch {
+		DstBlock		"Gain"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Switch6"
+	      SrcPort		      1
+	      DstBlock		      "Fi test"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Switch4"
+	      SrcPort		      1
+	      DstBlock		      "Xnastawy"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      Points		      [0, 30]
+	      DstBlock		      "Subsystem3"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Subsystem3"
+	      SrcPort		      1
+	      Points		      [60, 0]
+	      Branch {
+		Points			[0, -25; 165, 0]
+		DstBlock		"Switch5"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 15]
+		DstBlock		"Subsystem1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Subsystem3"
+	      SrcPort		      2
+	      Points		      [25, 0; 0, 30]
+	      DstBlock		      "Switch2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Subsystem2"
+	      SrcPort		      1
+	      Points		      [40, 0]
+	      Branch {
+		Points			[0, 15]
+		DstBlock		"Subsystem4"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -35; 130, 0; 0, 40]
+		DstBlock		"Switch4"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Subsystem2"
+	      SrcPort		      2
+	      Points		      [15, 0; 0, 35; 190, 0]
+	      DstBlock		      "Switch6"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Switch2"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, -115]
+	      DstBlock		      "Switch6"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "nieosiagalna1"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, -35]
+	      DstBlock		      "Switch2"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Rmin"
+	      SrcPort		      1
+	      Points		      [0, 25]
+	      DstBlock		      "Switch1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Rmax"
+	      SrcPort		      1
+	      Points		      [0, -40]
+	      DstBlock		      "Switch1"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "roznicaY"
+	  Position		  [1065, 273, 1095, 287]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Switch6"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -230]
+	  DstBlock		  "Switch2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "warunek na R"
+	  SrcPort		  2
+	  DstBlock		  "Switch6"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "not1"
+	  SrcPort		  1
+	  DstBlock		  "Switch2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Switch3"
+	  SrcPort		  1
+	  Points		  [80, 0; 0, 60]
+	  DstBlock		  "Switch5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch4"
+	  SrcPort		  1
+	  Points		  [80, 0; 0, -195]
+	  DstBlock		  "Switch5"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Switch5"
+	  SrcPort		  1
+	  Points		  [0, 60]
+	  DstBlock		  "Switch2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator3"
+	  SrcPort		  1
+	  DstBlock		  "not1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " 1"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -25]
+	  DstBlock		  "Switch3"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  " "
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 40]
+	  DstBlock		  "Switch4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "not"
+	  SrcPort		  1
+	  DstBlock		  "Switch4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "warunek na R"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -75]
+	    DstBlock		    "Switch4"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [135, 0]
+	    DstBlock		    "Switch6"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "warunek na Fi"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, 85]
+	    DstBlock		    "Switch3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [295, 0; 0, 515; -170, 0; 0, -30]
+	    DstBlock		    "Switch6"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator1"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "Switch3"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 130; 105, 0]
+	    Branch {
+	      DstBlock		      "Logical\nOperator3"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -60]
+	      DstBlock		      "Switch5"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator2"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "not"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -125]
+	    DstBlock		    "Logical\nOperator3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "do Rmin"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Logical\nOperator2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 80]
+	    DstBlock		    "warunek na R"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "do Rmax"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 90]
+	  DstBlock		  "Logical\nOperator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "do Fimin"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -95]
+	  DstBlock		  "Logical\nOperator1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "do Fimax"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    Points		    [0, -75]
+	    DstBlock		    "warunek na Fi"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Logical\nOperator1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "fi"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    DstBlock		    "do Fimin"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -110]
+	    DstBlock		    "do Fimax"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "Switch1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "fi"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch1"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -65]
+	    DstBlock		    "Mux1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [140, 0]
+	    Branch {
+	      DstBlock		      "do Rmax"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 105]
+	      DstBlock		      "do Rmin"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "r"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "Switch1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Switch1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "r"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -70]
+	    Branch {
+	      DstBlock		      "Mux1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -195]
+	      DstBlock		      "warunek na Fi"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 220]
+	    DstBlock		    "warunek na R"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "In"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In2"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Switch2"
+	  SrcPort		  1
+	  DstBlock		  "roznicaY"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "fi1"
+      SrcPort		      1
+      DstBlock		      "Radians\nto Degrees"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ograniczenie"
+      SrcPort		      1
+      DstBlock		      "Compare\nTo Constant"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Radians\nto Degrees"
+      SrcPort		      1
+      Points		      [45, 0]
+      Branch {
+	Points			[25, 0]
+	Branch {
+	  Points		  [0, -35]
+	  DstBlock		  "Compare\nTo Constant1"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 25]
+	  DstBlock		  "Compare\nTo Constant2"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	Points			[0, 400; 295, 0; 0, -130]
+	DstBlock		"Mux2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Add"
+      SrcPort		      1
+      DstBlock		      "Abs"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Abs"
+      SrcPort		      1
+      DstBlock		      "Compare\nTo Constant7"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Radians\nto Degrees1"
+      SrcPort		      1
+      Points		      [25, 0]
+      Branch {
+	Points			[40, 0]
+	Branch {
+	  Points		  [0, -20]
+	  DstBlock		  "Compare\nTo Constant3"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 40]
+	  DstBlock		  "Compare\nTo Constant4"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	Points			[0, 230]
+	Branch {
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 75; 335, 0; 0, -125]
+	  DstBlock		  "Mux2"
+	  DstPort		  2
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "fi3"
+      SrcPort		      1
+      DstBlock		      "Radians\nto Degrees2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "fi2"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	DstBlock		"Radians\nto Degrees1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 80; -125, 0; 0, 55]
+	DstBlock		"Mux1"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Radians\nto Degrees2"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	Points			[55, 0]
+	Branch {
+	  Points		  [0, -25]
+	  DstBlock		  "Compare\nTo Constant5"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 45]
+	  DstBlock		  "Compare\nTo Constant6"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	Points			[0, 120]
+	Branch {
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [0, 75; 370, 0; 0, -120]
+	  DstBlock		  "Mux2"
+	  DstPort		  3
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Compare\nTo Constant7"
+      SrcPort		      1
+      Points		      [75, 0; 0, -240]
+      DstBlock		      "Logical\nOperator"
+      DstPort		      10
+    }
+    Line {
+      SrcBlock		      "Compare\nTo Constant"
+      SrcPort		      1
+      Points		      [160, 0; 0, 135]
+      DstBlock		      "Logical\nOperator"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Compare\nTo Constant1"
+      SrcPort		      1
+      Points		      [145, 0; 0, 85]
+      DstBlock		      "Logical\nOperator"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Compare\nTo Constant2"
+      SrcPort		      1
+      Points		      [130, 0; 0, 35]
+      DstBlock		      "Logical\nOperator"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Compare\nTo Constant3"
+      SrcPort		      1
+      Points		      [130, 0; 0, -20]
+      DstBlock		      "Logical\nOperator"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "Compare\nTo Constant4"
+      SrcPort		      1
+      Points		      [145, 0; 0, -70]
+      DstBlock		      "Logical\nOperator"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "Compare\nTo Constant5"
+      SrcPort		      1
+      Points		      [160, 0; 0, -120]
+      DstBlock		      "Logical\nOperator"
+      DstPort		      8
+    }
+    Line {
+      SrcBlock		      "Compare\nTo Constant6"
+      SrcPort		      1
+      Points		      [175, 0; 0, -180]
+      DstBlock		      "Logical\nOperator"
+      DstPort		      9
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      DstBlock		      "fi3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      Points		      [50, 0]
+      Branch {
+	Points			[0, -110]
+	Branch {
+	  Points		  [0, -95]
+	  DstBlock		  "ograniczenie"
+	  DstPort		  1
+	}
+	Branch {
+	  DstBlock		  "fi1"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	DstBlock		"Mux1"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"fi2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Constant2"
+      SrcPort		      1
+      Points		      [125, 0]
+      Branch {
+	Points			[75, 0; 0, -35]
+	DstBlock		"Mux"
+	DstPort			3
+      }
+      Branch {
+	DstBlock		"optymalizacja1"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      Points		      [100, 0]
+      Branch {
+	Points			[0, -155]
+	Branch {
+	  DstBlock		  "optymalizacja1"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [0, -115; 500, 0]
+	  Branch {
+	    DstBlock		    "Compare\nTo Constant9"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    DstBlock		    "Compare\nTo Constant8"
+	    DstPort		    1
+	  }
+	}
+      }
+      Branch {
+	DstBlock		"Add1"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Compare\nTo Constant9"
+      SrcPort		      1
+      Points		      [175, 0; 0, 190]
+      DstBlock		      "Logical\nOperator"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Compare\nTo Constant8"
+      SrcPort		      1
+      Points		      [190, 0; 0, 240]
+      DstBlock		      "Logical\nOperator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux2"
+      SrcPort		      1
+      DstBlock		      "To Workspace"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      Points		      [80, 0]
+      Branch {
+	Points			[0, -95]
+	DstBlock		"optymalizacja1"
+	DstPort			1
+      }
+      Branch {
+	Points			[125, 0; 0, 35]
+	DstBlock		"Mux"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Add1"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Logical\nOperator"
+      SrcPort		      1
+      DstBlock		      "To Workspace1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "optymalizacja1"
+      SrcPort		      1
+      Points		      [0, 0]
+      Branch {
+	DstBlock		"Add2"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 55; 120, 0; 0, 440; 590, 0; 0, -120]
+	DstBlock		"Mux2"
+	DstPort			4
+      }
+    }
+    Line {
+      SrcBlock		      "Add2"
+      SrcPort		      1
+      DstBlock		      "Add1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant3"
+      SrcPort		      1
+      Points		      [30, 0]
+      DstBlock		      "Add2"
+      DstPort		      1
+    }
+  }
+}

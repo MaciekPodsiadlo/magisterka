@@ -1,0 +1,223 @@
+-- ******** Tunable Parameters ************************************************
+
+-- InlineParameters is off: no separate group for Tunable Parameters
+
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Data Store Memories ***********************************************
+
+group "Data Stores"
+{
+ flags: COLLAPSED
+}
+	p_proba1_DWork_real_T_0[28]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "obliczoneDist"
+	 origin: "proba1/obliczoneDist"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[29]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "obliczoneFi1"
+	 origin: "proba1/obliczoneFi1"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[30]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "obliczoneFi2"
+	 origin: "proba1/obliczoneFi2"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[31]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "obliczoneFi3"
+	 origin: "proba1/obliczoneFi3"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[32]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "obliczoneFi4"
+	 origin: "proba1/obliczoneFi4"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[33]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "obliczoneFi5"
+	 origin: "proba1/obliczoneFi5"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[34]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "ObliczoneX"
+	 origin: "proba1/obliczoneX"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[35]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "ObliczoneY"
+	 origin: "proba1/obliczoneY"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[36]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "ObliczoneZ"
+	 origin: "proba1/obliczoneZ"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[37]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "tmp_u0"
+	 origin: "proba1/tmp u0"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[38]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "tmp_u1"
+	 origin: "proba1/tmp u1"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[39]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "tmp_u2"
+	 origin: "proba1/tmp u2"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[40]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "tmp_u3"
+	 origin: "proba1/tmp u3"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[41]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "tmp_u4"
+	 origin: "proba1/tmp u4"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[42]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "tmp_u5"
+	 origin: "proba1/tmp u5"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[43]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "u0"
+	 origin: "proba1/u0"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[44]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "u1"
+	 origin: "proba1/u1"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[45]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "u2"
+	 origin: "proba1/u2"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[46]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "u3"
+	 origin: "proba1/u3"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[47]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "u4"
+	 origin: "proba1/u4"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[48]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "u5"
+	 origin: "proba1/u5"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[49]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "xKon"
+	 origin: "proba1/xKon"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[50]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "yKon"
+	 origin: "proba1/yKon"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[51]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "zKon"
+	 origin: "proba1/zKon"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[52]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "zadaneX"
+	 origin: "proba1/zadaneX"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[53]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "zadaneY"
+	 origin: "proba1/zadaneY"
+	 flags:  DSM
+	}
+	p_proba1_DWork_real_T_0[54]
+	{
+	 type:   flt(64,IEEE)*
+	 alias:  "zadaneZ"
+	 origin: "proba1/zadaneZ"
+	 flags:  DSM
+	}
+endgroup
+
+
+-- ******** Labels ************************************************************
+
+group "Labels"
+{
+ flags: COLLAPSED
+}
+
+endgroup
+
+-- ******** RTT Dynamic Variables *********************************************
+
+-- Generation of RTT Dynamic Variables turned off with EnableRealTimeTesting option.
+
+-- ******** Blockset variables ************************************************
+
